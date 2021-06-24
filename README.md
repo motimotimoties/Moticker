@@ -10,4 +10,6 @@
 
 ` cd laravel-react `
 
+` composer require laravel/ui `
+
 ` chown www-data storage/ -R `
