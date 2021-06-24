@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkspacesTable extends Migration
+class CreateDecidedShiftsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,12 @@ class CreateWorkspacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('workspaces', function (Blueprint $table) {
-            $table->increments('workspace_id');
+        Schema::create('decided_shifts', function (Blueprint $table) {
+            $table->increments('decided_shift_id');
             $table->unsignedBigInteger('user_id');
-            $table->string('name');
+            $table->date('date');
+            $table->time('enter_time');
+            $table->time('exit_time');
             $table->timestamps();
         });
     }
@@ -28,6 +30,6 @@ class CreateWorkspacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workspaces');
+        Schema::dropIfExists('decided_shifts');
     }
 }

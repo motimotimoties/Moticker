@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWorkspacesTable extends Migration
+class CreateUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,13 @@ class CreateWorkspacesTable extends Migration
      */
     public function up()
     {
-        Schema::create('workspaces', function (Blueprint $table) {
-            $table->increments('workspace_id');
-            $table->unsignedBigInteger('user_id');
+        Schema::create('users', function (Blueprint $table) {
+            $table->increments('user_id');
+            $table->string('email');
             $table->string('name');
+            $table->unsignedBigInteger('workspace_id');
+            $table->integer('salary')->nullable();
+            $table->rememberToken('token');
             $table->timestamps();
         });
     }
@@ -28,6 +31,6 @@ class CreateWorkspacesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('workspaces');
+        Schema::dropIfExists('users');
     }
 }
