@@ -5,8 +5,8 @@ export default function NavBar() {
     return (
         <div>
             <Link to="/">Home</Link>
-            <Link to="auth">Auth</Link>
-            <Link to="about">About</Link>
+            <Link to="login">Login</Link>
+            <Link to="workspaceCreate">Workspace</Link>
         </div>
     )
 }
