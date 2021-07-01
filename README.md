@@ -12,4 +12,6 @@
 
 ` composer require laravel/ui `
 
+` php artisan ui react --auth `
+
 ` chown www-data storage/ -R `
