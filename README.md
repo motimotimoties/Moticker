@@ -20,7 +20,9 @@
 
 ## サーバー
 アプリサーバー
+
 localhost:8080
 
 phpmyadmin
+
 localhost:4040
