@@ -15,3 +15,12 @@
 ` php artisan ui react `
 
 ` chown www-data storage/ -R `
+
+` npm install `
+
+## サーバー
+アプリサーバー
+localhost:8080
+
+phpmyadmin
+localhost:4040
