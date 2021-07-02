@@ -2,6 +2,7 @@
 シフト管理アプリ(開発中)
 
 ## 開発準備
+dockerのビルド
 ` docker-compose build `
 
 ` docker-compose up -d `
