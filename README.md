@@ -3,19 +3,34 @@
 
 ## 開発準備
 dockerのビルド
+
 ` docker-compose build `
+
+dockerの起動
 
 ` docker-compose up -d `
 
+appコンテナに入る
+
 ` docker-compose exec app bash `
+
+appコンテナ内のlaravel-reactを開く
 
 ` cd laravel-react `
 
+laravel/uiをインストールする
+
 ` composer require laravel/ui `
+
+laravel/uiにReactを使用する
 
 ` php artisan ui react `
 
+storageへのアクセスを許可する
+
 ` chown www-data storage/ -R `
+
+React用のnpmをインストールする
 
 ` npm install `
 
