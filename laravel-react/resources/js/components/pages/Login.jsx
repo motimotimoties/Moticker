@@ -9,7 +9,7 @@ export default function Login() {
     return (
         <div>
             <InputEmail submitValue={'ログイン'} />
-            <Link to="/auth">ログイン</Link>
+            <Link to="/auth">認証メールを送信</Link>
             <Link to="/workspaceCreate">ワークスペースを作成</Link>
         </div>
     )
