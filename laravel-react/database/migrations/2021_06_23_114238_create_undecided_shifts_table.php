@@ -14,7 +14,7 @@ class CreateUndecidedShiftsTable extends Migration
     public function up()
     {
         Schema::create('undecided_shifts', function (Blueprint $table) {
-            $table->increments('undecided_shift_id');
+            $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->date('date');
             $table->time('enter_time');

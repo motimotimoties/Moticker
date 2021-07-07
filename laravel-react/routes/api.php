@@ -21,4 +21,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/user', [UserRegist::class, 'index']);
 
-Route::post('/proRegist', [UserRegist::class, 'proRegist']);
+Route::post('/userCreate', [UserRegist::class, 'store']);

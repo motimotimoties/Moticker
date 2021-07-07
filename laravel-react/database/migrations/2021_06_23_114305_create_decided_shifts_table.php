@@ -14,7 +14,7 @@ class CreateDecidedShiftsTable extends Migration
     public function up()
     {
         Schema::create('decided_shifts', function (Blueprint $table) {
-            $table->increments('decided_shift_id');
+            $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->date('date');
             $table->time('enter_time');
