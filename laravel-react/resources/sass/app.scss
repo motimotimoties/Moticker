@@ -1,3 +1,6 @@
+//--------------------------------------------------------------
+//                        背景CSS
+//--------------------------------------------------------------
 html{
     height: 100%;
 
@@ -16,74 +19,6 @@ html{
                 background-color: #FFA500;
                 display: flex;
                 justify-content: center;
-
-                .container{
-                    height: 100%;
-                    margin: 0;
-                    z-index: 20;
-                    display: flex;
-                    justify-content: center;
-                    position: relative;
-                    top: 36%;
-
-                    ul{
-                        list-style: none;
-                        width: 100%;
-                        padding: 0;
-
-                        li{
-                            text-align: center;
-                            margin-bottom: 8%;
-                            height: 6%;
-                            font-size: 100%;
-
-                            &:last-child{
-                                margin-bottom: 0;
-                            }
-
-                            input{
-                                width: 100%;
-                                background-color: transparent;
-                                border: none;
-                                border-bottom: .1rem solid #707070;
-                                outline: none;
-                                color: #ddd;
-
-                                //     予測変換の背景色削除
-                                // &:-webkit-autofill{
-                                //     transition: background-color 9999s;
-                                // }
-                            }
-
-                            a{
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                border-radius: 1rem;
-                                transition: .2s;
-                                text-decoration: none;
-
-                                &:hover{
-                                    text-decoration: none;
-                                    transform: scale(.97);
-                                }
-                            }
-                        }
-                        .sendAuthenticationEmail{
-                            background-color: #707070;
-                            color: #eee;
-                        }
-                        .googleLogin{
-                            background-color: #fff;
-                            color: #333;
-                        }
-                        .workSpaceCreate{
-                            background-color: #FFA500;
-                            color: #eee;
-                        }
-                    }
-                }
 
                 .logoImg{
                     height: 20vh;
@@ -131,5 +66,98 @@ html{
                 }
             }
         }
+    }
+}
+
+//--------------------------------------------------------------
+//                        Login.JSX
+//--------------------------------------------------------------
+
+.loginContainer{
+    height: 100%;
+    margin: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 36%;
+
+    ul{
+        list-style: none;
+        width: 100%;
+        padding: 0;
+
+        li{
+            text-align: center;
+            margin-bottom: 8%;
+            height: 6%;
+            font-size: 100%;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+
+            input{
+                width: 100%;
+                background-color: transparent;
+                border: none;
+                border-bottom: .1rem solid #707070;
+                outline: none;
+                color: #ddd;
+
+                //     予測変換の背景色削除
+                // &:-webkit-autofill{
+                //     transition: background-color 9999s;
+                // }
+            }
+
+            a{
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 1rem;
+                transition: .2s;
+                text-decoration: none;
+
+                &:hover{
+                    text-decoration: none;
+                    transform: scale(.97);
+                }
+            }
+        }
+        .sendAuthenticationEmail{
+            background-color: #707070;
+            color: #eee;
+        }
+        .googleLogin{
+            background-color: #fff;
+            color: #333;
+        }
+        .workSpaceCreate{
+            background-color: #FFA500;
+            color: #eee;
+        }
+    }
+}
+
+//--------------------------------------------------------------
+//                        WorkspaceCreate.JSX
+//--------------------------------------------------------------
+
+.authContainer{
+    height: 5%;
+    margin: 0;
+    z-index: 20;
+    display: flexbox;
+    justify-content: center;
+    position: relative;
+    top: 36%;
+
+    p{
+        color: #eee;
+    }
+    input{
+        display: flex;
     }
 }

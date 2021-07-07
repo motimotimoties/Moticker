@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import InputEmail from '../atom/InputEmail';
+import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function WorkspaceCreate(props) {
 
@@ -27,6 +28,7 @@ export default function WorkspaceCreate(props) {
     }
 
     return (
+        <BackgroundDesign>
         <div>
             <p>{email}</p>
             <form onSubmit={handleSubmit}>
@@ -35,5 +37,6 @@ export default function WorkspaceCreate(props) {
             </form>
             <Link to="/auth" />
         </div>
+        </BackgroundDesign>
     )
 }
