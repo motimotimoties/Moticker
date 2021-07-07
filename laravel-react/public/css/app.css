@@ -116,7 +116,7 @@ html body #app .wrap .ballsAccountManagement .orangeBigboll {
   color: #eee;
 }
 
-.authContainer {
+.workspaceCreateContainer {
   height: 5%;
   margin: 0;
   z-index: 20;
@@ -125,9 +125,9 @@ html body #app .wrap .ballsAccountManagement .orangeBigboll {
   position: relative;
   top: 36%;
 }
-.authContainer p {
+.workspaceCreateContainer p {
   color: #eee;
 }
-.authContainer input {
+.workspaceCreateContainer input {
   display: flex;
 }

@@ -48,9 +48,7 @@ export default function backgroundDesign(props) {
                     <img className='orangeSmallboll' src={orangeSmallboll} alt="orange1"/>
                     <img className='orangeBigboll' src={orangeBigboll} alt="orange2"/>
                 </div>
-                <div className='container'>
-                    {props.children}
-                </div>
+                {props.children}
             </div>
     )
 }
