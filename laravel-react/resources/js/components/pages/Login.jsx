@@ -9,11 +9,12 @@ export default function Login() {
 
     return (
         <BackgroundDesign>
-            <div>
-                <InputEmail submitValue={'ログイン'} />
-                <Link to="/auth">認証メールを送信</Link>
-                <Link to="/workspaceCreate">ワークスペースを作成</Link>
-            </div>
+            <ul>
+                <li><InputEmail className="formMail" submitValue={'ログイン'} /></li>
+                <li><Link className="sendAuthenticationEmail" to="/auth">認証メールを送信</Link></li>
+                <li><Link className="googleLogin" to="http://google.com">googleでログイン</Link></li>
+                <li><Link className="workSpaceCreate" to="/workspaceCreate">ワークスペースを作成</Link></li>
+            </ul>
         </BackgroundDesign>
     )
 
