@@ -1990,6 +1990,95 @@ if (document.getElementById('app')) {
 
 /***/ }),
 
+/***/ "./resources/js/components/atom/BackgroundDesign.jsx":
+/*!***********************************************************!*\
+  !*** ./resources/js/components/atom/BackgroundDesign.jsx ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ backgroundDesign)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/logo.png */ "./resources/images/logo.png");
+/* harmony import */ var _images_brownboll_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/brownboll.svg */ "./resources/images/brownboll.svg");
+/* harmony import */ var _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangeboll.svg */ "./resources/images/orangeboll.svg");
+/* harmony import */ var _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/orangebollBig.svg */ "./resources/images/orangebollBig.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+function backgroundDesign(props) {
+  // const styles = {
+  //     wrap: {
+  //         height: '100%',
+  //         backgroundColor: '#FFA500',
+  //         display: 'flex',
+  //         justifyContent: 'center'
+  //     },
+  //     container: {
+  //         height: '100%',
+  //         margin: 0,
+  //         zIndex: 20,
+  //         display: 'flex',
+  //         justifyContent: 'center',
+  //         position: 'relative',
+  //         top: '36%',
+  //     },
+  //     logoImg: {
+  //         height: '20vh',
+  //         zIndex: 1,
+  //         position: 'absolute',
+  //         top: '5%',
+  //         left: '43%',
+  //     },
+  //     ballsAccountManagement: {
+  //         width: '90%',
+  //         height: '170%',
+  //         overflow: 'hidden',
+  //         zIndex: 0,
+  //         position: 'absolute',
+  //         bottom: '-30%',
+  //         left: '15%'
+  //     }
+  // }
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+    className: "wrap",
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+      className: "logoImg",
+      src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
+      alt: "LogoImage"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      className: "ballsAccountManagement",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "brownboll",
+        src: _images_brownboll_svg__WEBPACK_IMPORTED_MODULE_2__.default,
+        alt: "brown"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "orangeSmallboll",
+        src: _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_3__.default,
+        alt: "orange1"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+        className: "orangeBigboll",
+        src: _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_4__.default,
+        alt: "orange2"
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+      className: "container",
+      children: props.children
+    })]
+  });
+}
+
+/***/ }),
+
 /***/ "./resources/js/components/atom/InputEmail.jsx":
 /*!*****************************************************!*\
   !*** ./resources/js/components/atom/InputEmail.jsx ***!
@@ -2093,9 +2182,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Login)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/InputEmail */ "./resources/js/components/atom/InputEmail.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2113,6 +2203,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Login() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -2124,16 +2215,18 @@ function Login() {
       email = _useState4[0],
       setEmail = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
-      submitValue: 'ログイン'
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-      to: "/auth",
-      children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_3__.Link, {
-      to: "/workspaceCreate",
-      children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
-    })]
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
+        submitValue: 'ログイン'
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        to: "/auth",
+        children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        to: "/workspaceCreate",
+        children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
+      })]
+    })
   });
 }
 
@@ -2249,6 +2342,66 @@ function Auth(props) {
     autoFocus: true
   });
 }
+
+/***/ }),
+
+/***/ "./resources/images/brownboll.svg":
+/*!****************************************!*\
+  !*** ./resources/images/brownboll.svg ***!
+  \****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/brownboll.svg?de7ea241514a85b7891d36fd70c07def");
+
+/***/ }),
+
+/***/ "./resources/images/logo.png":
+/*!***********************************!*\
+  !*** ./resources/images/logo.png ***!
+  \***********************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/logo.png?1cbb8301b660369eebcecd12747b86f3");
+
+/***/ }),
+
+/***/ "./resources/images/orangeboll.svg":
+/*!*****************************************!*\
+  !*** ./resources/images/orangeboll.svg ***!
+  \*****************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangeboll.svg?6973353ad3a923d6d5532a3d91498902");
+
+/***/ }),
+
+/***/ "./resources/images/orangebollBig.svg":
+/*!********************************************!*\
+  !*** ./resources/images/orangebollBig.svg ***!
+  \********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangebollBig.svg?7cabb9c73f9ba2ff996c30456540bb17");
 
 /***/ }),
 
