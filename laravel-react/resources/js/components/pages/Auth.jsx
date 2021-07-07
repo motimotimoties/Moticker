@@ -1,11 +1,14 @@
 import React from 'react';
 import { useEffect } from 'react';
+import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function Auth(props) {
     useEffect(() => {
         console.log(props.id)
     })
     return (
-        <input type="text" autoFocus />
+        <BackgroundDesign>
+            <input type="text" autoFocus />
+        </BackgroundDesign>
     )
 }
