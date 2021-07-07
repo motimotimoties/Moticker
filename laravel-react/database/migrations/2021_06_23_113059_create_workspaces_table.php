@@ -14,7 +14,7 @@ class CreateWorkspacesTable extends Migration
     public function up()
     {
         Schema::create('workspaces', function (Blueprint $table) {
-            $table->increments('workspace_id');
+            $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->string('name');
             $table->timestamps();

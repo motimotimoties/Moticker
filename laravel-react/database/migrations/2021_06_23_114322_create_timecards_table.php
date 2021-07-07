@@ -14,7 +14,7 @@ class CreateTimecardsTable extends Migration
     public function up()
     {
         Schema::create('timecards', function (Blueprint $table) {
-            $table->increments('timecard_id');
+            $table->increments('id');
             $table->unsignedBigInteger('user_id');
             $table->date('date');
             $table->time('enter_time');
