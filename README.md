@@ -18,13 +18,13 @@ appコンテナ内のlaravel-reactを開く
 
 ` cd laravel-react `
 
-laravel/uiをインストールする
+composerをインストールする
 
-` composer require laravel/ui `
+` composer update `
 
-laravel/uiにReactを使用する
+<!-- laravel/uiにReactを使用する
 
-` php artisan ui react `
+` php artisan ui react ` -->
 
 storageへのアクセスを許可する
 
