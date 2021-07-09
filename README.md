@@ -18,7 +18,7 @@ appコンテナ内のlaravel-reactを開く
 
 ` cd laravel-react `
 
-laravel/uiをインストールする
+をインストールする
 
 ` composer update `
 
