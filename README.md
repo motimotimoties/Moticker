@@ -32,7 +32,7 @@ storageへのアクセスを許可する
 
 React用のnpmをインストールする
 
-` npm install `
+` npm update `
 
 ## サーバー
 アプリサーバー
