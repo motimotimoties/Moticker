@@ -26,7 +26,7 @@ export default function Signup() {
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label>名前</label>
+                <label>name</label>
                 <input type="name" onChange={handleChange} name="name" ></input>
                 <input type="submit"></input>
             </form>
