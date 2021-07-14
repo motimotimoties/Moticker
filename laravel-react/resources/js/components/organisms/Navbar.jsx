@@ -7,6 +7,7 @@ export default function NavBar() {
             <Link to="/">Home</Link>
             <Link to="login">Login</Link>
             <Link to="workspacecreate">Workspace</Link>
+            <Link to="shiftcalendar">Shiftcalendar</Link>
         </div>
     )
 }
