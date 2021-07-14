@@ -6,7 +6,7 @@ export default function NavBar() {
         <div>
             <Link to="/">Home</Link>
             <Link to="login">Login</Link>
-            <Link to="workspaceCreate">Workspace</Link>
+            <Link to="workspacecreate">Workspace</Link>
         </div>
     )
 }
