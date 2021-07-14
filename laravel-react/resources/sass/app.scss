@@ -3,71 +3,105 @@
 //--------------------------------------------------------------
 html{
     height: 100%;
-
-    body{
-        height: 100%;
-        width: 100%;
-        margin: 0;
-        overflow: hidden;
-
-        #app{
-            height: 100%;
-            width: 100%;
-
-            .wrap-login{
-                height: 100%;
-                background-color: #FFA500;
-                display: flex;
-                justify-content: center;
-
-                .logoImg{
-                    height: 20vh;
-                    z-index: 1;
-                    position: absolute;
-                    top: 5%;
-                    left: 43%;
-
-                }
-                    .ballsAccountManagement{
-                        width: 90%;
-                        height: 170%;
-                        overflow: hidden;
-                        z-index: 0;
-                        position: absolute;
-                        bottom: -30%;
-                        left: 15%;
-
-                    .brownboll{
-                        position: absolute;
-                        transform: translateX(-50%);
-                        transform: translateY(-50%);
-                        max-width: 100%;
-                        top: 50%;
-                    }
-
-                    .orangeSmallboll{
-                        position: absolute;
-                        transform: translateX(-50%);
-                        transform: translateY(-50%);
-                        max-width: 10%;
-                        max-height: auto;
-                        top: 30%;
-                        right: 30%;
-                    }
-                    .orangeBigboll{
-                        position: absolute;
-                        transform: translateX(-50%);
-                        transform: translateY(-50%);
-                        max-width: 25%;
-                        max-height: auto;
-                        top: 45%;
-                        right: 0%;
-                    }
-                }
-            }
+}
+body{
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+}
+#app{
+    height: 100%;
+    width: 100%;
+}
+.wrap-login{
+    height: 100%;
+    background-color: #FFA500;
+    display: flex;
+    justify-content: center;
+    .logoImg{
+        height: 20vh;
+        z-index: 1;
+        position: absolute;
+        top: 5%;
+        left: 43%;
+    }
+        .ballsAccountManagement{
+            width: 90%;
+            height: 170%;
+            overflow: hidden;
+            z-index: 0;
+            position: absolute;
+            bottom: -30%;
+            left: 15%;
+        .brownboll{
+            position: absolute;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            max-width: 100%;
+            top: 50%;
+        }
+        .orangeSmallboll{
+            position: absolute;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            max-width: 10%;
+            max-height: auto;
+            top: 30%;
+            right: 30%;
+        }
+        .orangeBigboll{
+            position: absolute;
+            transform: translateX(-50%);
+            transform: translateY(-50%);
+            max-width: 25%;
+            max-height: auto;
+            top: 45%;
+            right: 0%;
         }
     }
 }
+
+//--------------------------------------------------------------
+//                        calendar背景.JSX
+//--------------------------------------------------------------
+.wrap-calendar{
+    height: 100%;
+    background-color: #3E2E28;
+    display: flex;
+    justify-content: center;
+
+    .ballsAccountManagement{
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+        position: absolute;
+
+        .orangeSmallboll{
+            position: absolute;
+            max-width: 8%;
+            max-height: auto;
+            top: 25%;
+            left: 0%;
+        }
+        .orangeBigboll{
+            position: absolute;
+            max-width: 28%;
+            max-height: auto;
+            bottom: -10%;
+            left: -5%;
+        }
+        .orangesuperBigboll{
+            position: absolute;
+            max-width: 100%;
+            max-height: auto;
+            bottom: 0%;
+            right: -15%;
+        }
+    }
+}
+
 
 //--------------------------------------------------------------
 //                        Login.JSX
@@ -165,6 +199,7 @@ html{
 //--------------------------------------------------------------
 //                        Auth.JSX
 //--------------------------------------------------------------
+
 .authContainer{
     height: 100%;
     margin: 0;
@@ -183,5 +218,26 @@ html{
         border-bottom: .1rem solid #707070;
         outline: none;
         color: #ddd;
+    }
+}
+
+//--------------------------------------------------------------
+//                        Shiftcalendar.JSX
+//--------------------------------------------------------------
+.calendarContainer{
+    height: 100%;
+    margin: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 36%;
+
+    .react-calendar{
+        width: 60%;
+
+        .react-calendar__navigation{
+            font-size: 1rem;
+        }
     }
 }
