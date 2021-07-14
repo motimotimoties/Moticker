@@ -27,6 +27,7 @@
     },
     "dependencies": {
         "@material-ui/core": "^4.11.4",
+        "react-calendar": "^3.4.0",
         "react-router-dom": "^5.2.0"
     }
 }
