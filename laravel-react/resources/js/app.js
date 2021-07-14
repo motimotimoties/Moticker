@@ -6,6 +6,8 @@ import Home from './components/pages/Home';
 import WorkspaceCreate from './components/pages/WorkspaceCreate';
 import Auth from './components/pages/auth';
 import Signup from './components/pages/Signup';
+import WorkspaceSetting from './components/pages/WorkspaceSetting';
+import Top from './components/pages/Top';
 
 function App() {
     return (
@@ -16,6 +18,8 @@ function App() {
                 <Route path='/workspacecreate' component={WorkspaceCreate} />
                 <Route path='/auth' component={Auth} />
                 <Route path='/signup' component={Signup} />
+                <Route path='/workspacesetting' component={WorkspaceSetting} />
+                <Route path='/top' component={Top} />
             </Switch>
         </BrowserRouter>
     )
