@@ -8,7 +8,7 @@ import orangeBigboll from '../../../images/orangebollBig.svg'
 export default function backgroundDesign(props) {
 
     return (
-            <div className='wrap'>
+            <div className='wrap-login'>
                 <img className='logoImg' src={logo} alt="LogoImage" />
                 <div className='ballsAccountManagement'>
                     <img className='brownboll' src={brownboll} alt="brown"/>
