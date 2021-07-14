@@ -17,6 +17,7 @@ class CreateUserAuthsTable extends Migration
             $table->increments('id');
             $table->string('email');
             $table->string('token');
+            $table->integer('status')->default(0);
             $table->timestamps();
         });
     }

@@ -17,7 +17,7 @@ class CreateUsersTable extends Migration
             $table->increments('id');
             $table->string('email');
             $table->string('name');
-            $table->unsignedBigInteger('workspace_id');
+            $table->unsignedBigInteger('workspace_id')->nullable();
             $table->integer('salary')->nullable();
             $table->rememberToken('token');
             $table->timestamps();

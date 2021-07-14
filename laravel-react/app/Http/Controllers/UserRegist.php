@@ -43,4 +43,19 @@ class UserRegist extends Controller
 
         return response()->json($id);
     }
+
+    public function regist(Request $request)
+    {
+        $id = $request['id'];
+        $token = $request['token'];
+
+        $res = User_auth::select('email')->where('id', $id)->where('token', $token)->first();
+        $email = $res->email;
+        $res = User_auth::select('id')->where('email', $email)->first();
+        $res->status = 1;
+        $res->save();
+        $id = $res->id;
+
+        return response()->json($id);
+    }
 }

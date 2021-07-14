@@ -28,7 +28,7 @@ class MakeworkspaceController extends Controller
     	$user_id = $request['user_id'];
     	$id = $request['id'];
 
-    	App\Workspace::where('id', $id)
+    	Workspace::where('id', $id)
     		->update(['name' => $name, 'user_id' => $user_id]);
     }
 
