@@ -2032,7 +2032,7 @@ __webpack_require__.r(__webpack_exports__);
 
 function backgroundDesign(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-    className: "wrap",
+    className: "wrap-login",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
       className: "logoImg",
       src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,

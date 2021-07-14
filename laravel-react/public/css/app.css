@@ -11,20 +11,20 @@ html body #app {
   height: 100%;
   width: 100%;
 }
-html body #app .wrap {
+html body #app .wrap-login {
   height: 100%;
   background-color: #FFA500;
   display: flex;
   justify-content: center;
 }
-html body #app .wrap .logoImg {
+html body #app .wrap-login .logoImg {
   height: 20vh;
   z-index: 1;
   position: absolute;
   top: 5%;
   left: 43%;
 }
-html body #app .wrap .ballsAccountManagement {
+html body #app .wrap-login .ballsAccountManagement {
   width: 90%;
   height: 170%;
   overflow: hidden;
@@ -33,14 +33,14 @@ html body #app .wrap .ballsAccountManagement {
   bottom: -30%;
   left: 15%;
 }
-html body #app .wrap .ballsAccountManagement .brownboll {
+html body #app .wrap-login .ballsAccountManagement .brownboll {
   position: absolute;
   transform: translateX(-50%);
   transform: translateY(-50%);
   max-width: 100%;
   top: 50%;
 }
-html body #app .wrap .ballsAccountManagement .orangeSmallboll {
+html body #app .wrap-login .ballsAccountManagement .orangeSmallboll {
   position: absolute;
   transform: translateX(-50%);
   transform: translateY(-50%);
@@ -49,7 +49,7 @@ html body #app .wrap .ballsAccountManagement .orangeSmallboll {
   top: 30%;
   right: 30%;
 }
-html body #app .wrap .ballsAccountManagement .orangeBigboll {
+html body #app .wrap-login .ballsAccountManagement .orangeBigboll {
   position: absolute;
   transform: translateX(-50%);
   transform: translateY(-50%);
@@ -130,4 +130,24 @@ html body #app .wrap .ballsAccountManagement .orangeBigboll {
 }
 .workspaceCreateContainer input {
   display: flex;
+}
+
+.authContainer {
+  height: 100%;
+  margin: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 36%;
+}
+.authContainer input {
+  width: 50%;
+  height: 1.5rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid #707070;
+  outline: none;
+  color: #ddd;
 }

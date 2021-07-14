@@ -1,5 +1,5 @@
 //--------------------------------------------------------------
-//                        背景CSS
+//                        Login背景CSS
 //--------------------------------------------------------------
 html{
     height: 100%;
@@ -14,7 +14,7 @@ html{
             height: 100%;
             width: 100%;
 
-            .wrap{
+            .wrap-login{
                 height: 100%;
                 background-color: #FFA500;
                 display: flex;
@@ -159,5 +159,29 @@ html{
     }
     input{
         display: flex;
+    }
+}
+
+//--------------------------------------------------------------
+//                        Auth.JSX
+//--------------------------------------------------------------
+.authContainer{
+    height: 100%;
+    margin: 0;
+    z-index: 20;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    top: 36%;
+
+    input{
+        width: 50%;
+        height: 1.5rem;
+        font-size: 2rem;
+        background-color: transparent;
+        border: none;
+        border-bottom: .1rem solid #707070;
+        outline: none;
+        color: #ddd;
     }
 }
