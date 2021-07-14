@@ -8,6 +8,7 @@ import Auth from './components/pages/auth';
 import Signup from './components/pages/Signup';
 import WorkspaceSetting from './components/pages/WorkspaceSetting';
 import Top from './components/pages/Top';
+import Shiftcalendar from './components/pages/Shiftcalendar';
 
 function App() {
     return (
@@ -17,6 +18,7 @@ function App() {
                 <Route path='/login' component={Login} />
                 <Route path='/workspacecreate' component={WorkspaceCreate} />
                 <Route path='/auth' component={Auth} />
+                <Route path='/shiftcalendar' component={Shiftcalendar} />
                 <Route path='/signup' component={Signup} />
                 <Route path='/workspacesetting' component={WorkspaceSetting} />
                 <Route path='/top' component={Top} />
