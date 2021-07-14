@@ -145,11 +145,11 @@ html{
 //                        WorkspaceCreate.JSX
 //--------------------------------------------------------------
 
-.authContainer{
-    height: 5%;
+.workspaceCreateContainer{
+    height: 100%;
     margin: 0;
     z-index: 20;
-    display: flexbox;
+    display: flex;
     justify-content: center;
     position: relative;
     top: 36%;

@@ -31,7 +31,7 @@ export default function WorkspaceCreate(props) {
 
     return (
         <BackgroundDesign>
-            <div>
+            <div className="workspaceCreateContainer">
                 <form onSubmit={handleSubmit}>
                     <input type="email" name="email" onChange={handleChange} autoFocus />
                     <input type="submit" value="登録" />

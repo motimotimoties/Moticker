@@ -29,10 +29,12 @@ export default function Auth(props) {
             })
         }
     }
-    
+
     return (
         <BackgroundDesign>
-            <input type="text" name="token" maxLength="6" autoFocus onChange={handleChange} />
+            <div className="authContainer">
+                <input type="text" name="token" maxLength="6" autoFocus onChange={handleChange} />
+            </div>
         </BackgroundDesign>
     )
 }
