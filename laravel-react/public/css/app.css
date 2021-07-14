@@ -196,9 +196,49 @@ body {
   z-index: 20;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
-  top: 36%;
 }
 .calendarContainer .react-calendar {
   width: 60%;
+  height: 92%;
+}
+.calendarContainer .react-calendar button {
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #eee;
+}
+.calendarContainer .react-calendar button:hover {
+  border: 2px solid #007bff;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.calendarContainer .react-calendar .react-calendar__navigation {
+  height: 10%;
+}
+.calendarContainer .react-calendar .react-calendar__navigation span {
+  font-size: 1.7rem;
+  font-weight: bold;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer {
+  height: 100%;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+  height: 100%;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div {
+  height: 100%;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div {
+  height: 100%;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays {
+  height: 5%;
+  text-align: center;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+}
+.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days {
+  height: 85%;
+  position: relative;
 }
