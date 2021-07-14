@@ -116,18 +116,18 @@ html body #app .wrap .ballsAccountManagement .orangeBigboll {
   color: #eee;
 }
 
-.authContainer {
-  height: 5%;
+.workspaceCreateContainer {
+  height: 100%;
   margin: 0;
   z-index: 20;
-  display: flexbox;
+  display: flex;
   justify-content: center;
   position: relative;
   top: 36%;
 }
-.authContainer p {
+.workspaceCreateContainer p {
   color: #eee;
 }
-.authContainer input {
+.workspaceCreateContainer input {
   display: flex;
 }

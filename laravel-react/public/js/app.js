@@ -2021,39 +2021,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function backgroundDesign(props) {
-  // const styles = {
-  //     wrap: {
-  //         height: '100%',
-  //         backgroundColor: '#FFA500',
-  //         display: 'flex',
-  //         justifyContent: 'center'
-  //     },
-  //     container: {
-  //         height: '100%',
-  //         margin: 0,
-  //         zIndex: 20,
-  //         display: 'flex',
-  //         justifyContent: 'center',
-  //         position: 'relative',
-  //         top: '36%',
-  //     },
-  //     logoImg: {
-  //         height: '20vh',
-  //         zIndex: 1,
-  //         position: 'absolute',
-  //         top: '5%',
-  //         left: '43%',
-  //     },
-  //     ballsAccountManagement: {
-  //         width: '90%',
-  //         height: '170%',
-  //         overflow: 'hidden',
-  //         zIndex: 0,
-  //         position: 'absolute',
-  //         bottom: '-30%',
-  //         left: '15%'
-  //     }
-  // }
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
     className: "wrap",
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
@@ -2075,10 +2042,7 @@ function backgroundDesign(props) {
         src: _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_4__.default,
         alt: "orange2"
       })]
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
-      className: "container",
-      children: props.children
-    })]
+    }), props.children]
   });
 }
 
@@ -2221,31 +2185,34 @@ function Login() {
       setEmail = _useState4[1];
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
-          className: "formMail",
-          submitValue: 'ログイン'
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-          className: "sendAuthenticationEmail",
-          to: "/auth",
-          children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-          className: "googleLogin",
-          to: "http://google.com",
-          children: "google\u3067\u30ED\u30B0\u30A4\u30F3"
-        })
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-          className: "workSpaceCreate",
-          to: "/workspaceCreate",
-          children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
-        })
-      })]
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "loginContainer",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
+            className: "formMail",
+            submitValue: 'ログイン'
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+            className: "sendAuthenticationEmail",
+            to: "/auth",
+            children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+            className: "googleLogin",
+            to: "http://google.com",
+            children: "google\u3067\u30ED\u30B0\u30A4\u30F3"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+            className: "workSpaceCreate",
+            to: "/workspaceCreate",
+            children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
+          })
+        })]
+      })
     })
   });
 }
@@ -2306,7 +2273,9 @@ function Signup() {
     axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/signup', {
       id: id,
       name: name
-    }).then(function (response) {});
+    }).then(function (response) {
+      history.push('workspacesetting?id=' + response.data);
+    });
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
@@ -2393,6 +2362,7 @@ function WorkspaceCreate(props) {
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_3__.default, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+      className: "workspaceCreateContainer",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("form", {
         onSubmit: handleSubmit,
         children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("input", {
@@ -2476,12 +2446,15 @@ function Auth(props) {
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-      type: "text",
-      name: "token",
-      maxLength: "6",
-      autoFocus: true,
-      onChange: handleChange
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "authContainer",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+        type: "text",
+        name: "token",
+        maxLength: "6",
+        autoFocus: true,
+        onChange: handleChange
+      })
     })
   });
 }
