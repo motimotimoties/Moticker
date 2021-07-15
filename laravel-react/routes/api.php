@@ -25,6 +25,7 @@ Route::get('/user', [UserRegist::class, 'index']);
 Route::post('/userCreate', [UserRegist::class, 'store']);
 
 Route::post('/userRegist', [UserRegist::class, 'regist']);
+Route::post('/signup', [UserRegist::class, 'signup']);
 
 
 Route::post('/makeworkspace', [MakeworkspaceController::class, 'store']);
