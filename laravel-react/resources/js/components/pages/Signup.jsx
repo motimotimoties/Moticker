@@ -1,10 +1,13 @@
 import axios from 'axios'
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 
 export default function Signup() {
     const urlParam = window.location.search.substring(1)
     const temp = urlParam.split('=')
     const [id, setId] = useState(temp[1])
+
+    const history = useHistory();
 
     const [name, setName] = useState('')
 

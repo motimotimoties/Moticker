@@ -41,6 +41,9 @@ class UserRegist extends Controller
             $item->save();
         }
 
+        $res = User_auth::select('token')->where('id', $id)->first();
+        $token = $res->token;
+
         return response()->json($id);
     }
 
@@ -64,6 +67,20 @@ class UserRegist extends Controller
         $user_auth_id = $request['id'];
         $name = $request['name'];
 
+        $status = User_auth::select('status')->where('id', $user_auth_id)->first();
         $email = User_auth::select('email')->where('id', $user_auth_id)->first();
+        $status = $status->status;
+        $email = $email->email;
+
+        if ($status == 1) {
+            $user = new User;
+            $user->email = $email;
+            $user->name = $name;
+            $user->save();
+    
+            $id = $user->id;
+    
+            return response()->json($id);
+        }
     }
 }
