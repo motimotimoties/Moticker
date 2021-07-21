@@ -203,42 +203,68 @@ body {
   width: 60%;
   height: 92%;
 }
-.calendarContainer .react-calendar button {
+.calendarContainer .react-calendar__navigation {
+  height: 6%;
+}
+.calendarContainer .react-calendar__viewContainer {
+  height: 100%;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view {
+  height: 100%;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div {
+  height: 100%;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div {
+  height: 100%;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays {
+  height: 5%;
+  text-align: center;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days {
+  height: 85%;
+  position: relative;
+}
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days button {
   background-color: rgba(0, 0, 0, 0.3);
   color: #eee;
 }
-.calendarContainer .react-calendar button:hover {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days button:hover {
   border: 2px solid #007bff;
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 0.4);
 }
-.calendarContainer .react-calendar .react-calendar__navigation {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__navigation {
   height: 10%;
 }
-.calendarContainer .react-calendar .react-calendar__navigation span {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__navigation span {
   font-size: 1.7rem;
   font-weight: bold;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer {
   height: 100%;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view {
   height: 100%;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view div {
   height: 100%;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view div div {
   height: 100%;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays {
   height: 5%;
   text-align: center;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays abbr {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays abbr {
   text-decoration: none;
 }
-.calendarContainer .react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days {
+.calendarContainer .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days {
   height: 85%;
   position: relative;
 }
