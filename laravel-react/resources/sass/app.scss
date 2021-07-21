@@ -284,13 +284,62 @@ body{
                         //     top: 5%;
                         //     left: 5%;
                         // }
+        button{
+            background-color: rgba(0, 0, 0, .3);
+            color: #eee;
+
+            &:hover{
+                border: 2px solid #007bff;
+                box-sizing: border-box;
+                background-color: rgba(0, 0, 0, .4);
+            }
+        }
+
+        .react-calendar__navigation{
+            height: 10%;
+
+            span{
+                font-size: 1.7rem;
+                font-weight: bold;
+            }
+        }
+        .react-calendar__viewContainer{
+            height: 100%;
+
+            .react-calendar__month-view{
+                height: 100%;
+
+                div{
+                    height: 100%;
+                    div{
+                        height: 100%;
+
+                        .react-calendar__month-view__weekdays{
+                            height: 5%;
+                            text-align: center;
+
+                            abbr{
+                                text-decoration: none;
+                            }
+                        }
+                        .react-calendar__month-view__days{
+                            height: 85%;
+                            position: relative;
+
+                            // abbr{
+                            //     font-size: 1rem;
+                            //     position: absolute;
+                            //     top: 5%;
+                            //     left: 5%;
+                            // }
+                        }
                     }
                 }
             }
         }
     }
 }
-
-
-
-// http://localhost:8080/shiftcalendar
+            }
+        }
+    }
+}
