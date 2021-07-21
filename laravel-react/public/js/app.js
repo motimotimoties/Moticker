@@ -2729,6 +2729,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/esm/index.js");
 /* harmony import */ var _atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/BackgroundCalendar */ "./resources/js/components/atom/BackgroundCalendar.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+function _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _unsupportedIterableToArray(arr) || _nonIterableSpread(); }
+
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+
+function _iterableToArray(iter) { if (typeof Symbol !== "undefined" && iter[Symbol.iterator] != null || iter["@@iterator"] != null) return Array.from(iter); }
+
+function _arrayWithoutHoles(arr) { if (Array.isArray(arr)) return _arrayLikeToArray(arr); }
+
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2758,13 +2766,17 @@ function Shiftcalendar() {
       setData = _useState4[1];
 
   var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
-    date: '2021-07-15',
-    text: 'フォード寝坊',
-    time: '9:30~10:00'
+    date: "2021-07-15",
+    text: "フォード寝坊",
+    time: "9:30~10:00"
   }, {
-    date: '2021-07-17',
-    text: 'ビアガーデンバイト',
-    time: '16:00~21:15'
+    date: "2021-07-17",
+    text: "ビアガーデンバイト",
+    time: "16:00~21:15"
+  }, {
+    date: "2021-07-21",
+    text: "バリオンさぼった",
+    time: "9:30~14:30"
   }]),
       _useState6 = _slicedToArray(_useState5, 2),
       monthItem = _useState6[0],
@@ -2793,17 +2805,26 @@ function Shiftcalendar() {
     //     return view === 'month' && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2] ?
     //     <div>{monthItem[i].text}<br/>{monthItem[i].time}</div> : null
     // }
-    monthItem.map(function (data) {
-      var calendar = new Date(data.date);
-
-      if (view === 'month' && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2]) {
-        return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
-          children: ["test", data.text, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), data.time, console.log(data.text)]
-        });
-      } else {
-        null;
-      } // return <div>{data.text}{console.log(data)}</div>
-
+    // monthItem.map((data) => {
+    //     let calendar = new Date(data.date)
+    //     if (view === 'month' && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2]) {
+    //         return (
+    //             <div>test{data.text}<br/>{data.time}{console.log(data.text)}</div>
+    //         )
+    //     } else {
+    //         null
+    //     }
+    //     // return <div>{data.text}{console.log(data)}</div>
+    // })
+    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "contain-shift-subject",
+      children: monthItem.reduce(function (acc, curr) {
+        var calendar = new Date(curr.date);
+        return view === "month" && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2] ? [].concat(_toConsumableArray(acc), [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+          className: "shift-subject",
+          children: [curr.text, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), curr.time]
+        })]) : acc;
+      }, [])
     });
   };
 
