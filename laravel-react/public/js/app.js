@@ -2432,10 +2432,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ BackgroundCalendar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/orangeboll.svg */ "./resources/images/orangeboll.svg");
-/* harmony import */ var _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/orangebollBig.svg */ "./resources/images/orangebollBig.svg");
-/* harmony import */ var _images_orangebollsuperBig_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangebollsuperBig.svg */ "./resources/images/orangebollsuperBig.svg");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/logo.png */ "./resources/images/logo.png");
+/* harmony import */ var _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/yellowBall.svg */ "./resources/images/yellowBall.svg");
+/* harmony import */ var _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangeBall.svg */ "./resources/images/orangeBall.svg");
+/* harmony import */ var _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/greenBall.svg */ "./resources/images/greenBall.svg");
+/* harmony import */ var _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../images/orangeTriangles.svg */ "./resources/images/orangeTriangles.svg");
+/* harmony import */ var _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../images/greenTriangles.svg */ "./resources/images/greenTriangles.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
 
 
 
@@ -2444,22 +2450,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function BackgroundCalendar(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "wrap-calendar",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
-      className: "ballsAccountManagement",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        className: "orangeSmallboll",
-        src: _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_1__.default,
-        alt: "orange1"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        className: "orangeBigboll",
-        src: _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_2__.default,
-        alt: "orange2"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
-        className: "orangesuperBigboll",
-        src: _images_orangebollsuperBig_svg__WEBPACK_IMPORTED_MODULE_3__.default,
-        alt: "orange3"
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      className: "backgroundManagement",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "logo",
+        src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
+        alt: "logoImage"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "yellowBall",
+        src: _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__.default,
+        alt: "BigYellowBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "orangeBall",
+        src: _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_3__.default,
+        alt: "BigorangeBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "greenBall",
+        src: _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_4__.default,
+        alt: "BiggreenBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "orangeTriangles",
+        src: _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_5__.default,
+        alt: "OrangeTriangles"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "greenTriangles",
+        src: _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_6__.default,
+        alt: "GreenTriangles"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "smallYellowBall",
+        src: _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__.default,
+        alt: "SmallYellowBall"
       })]
     }), props.children]
   });
@@ -2480,10 +2502,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/logo.png */ "./resources/images/logo.png");
-/* harmony import */ var _images_brownboll_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/brownboll.svg */ "./resources/images/brownboll.svg");
-/* harmony import */ var _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangeboll.svg */ "./resources/images/orangeboll.svg");
-/* harmony import */ var _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/orangebollBig.svg */ "./resources/images/orangebollBig.svg");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/yellowBall.svg */ "./resources/images/yellowBall.svg");
+/* harmony import */ var _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangeBall.svg */ "./resources/images/orangeBall.svg");
+/* harmony import */ var _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/greenBall.svg */ "./resources/images/greenBall.svg");
+/* harmony import */ var _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../images/orangeTriangles.svg */ "./resources/images/orangeTriangles.svg");
+/* harmony import */ var _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../../../images/greenTriangles.svg */ "./resources/images/greenTriangles.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 
@@ -2493,26 +2519,38 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function backgroundDesign(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
     className: "wrap-login",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
       className: "logoImg",
       src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
       alt: "LogoImage"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-      className: "ballsAccountManagement",
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-        className: "brownboll",
-        src: _images_brownboll_svg__WEBPACK_IMPORTED_MODULE_2__.default,
-        alt: "brown"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-        className: "orangeSmallboll",
-        src: _images_orangeboll_svg__WEBPACK_IMPORTED_MODULE_3__.default,
-        alt: "orange1"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("img", {
-        className: "orangeBigboll",
-        src: _images_orangebollBig_svg__WEBPACK_IMPORTED_MODULE_4__.default,
-        alt: "orange2"
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+      className: "backgroundManagement",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "logo",
+        src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
+        alt: "logoImage"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "yellowBall",
+        src: _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__.default,
+        alt: "BigYellowBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "orangeBall",
+        src: _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_3__.default,
+        alt: "BigorangeBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "greenBall",
+        src: _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_4__.default,
+        alt: "BiggreenBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "orangeTriangles",
+        src: _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_5__.default,
+        alt: "orangeTriangles"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
+        className: "greenTriangles",
+        src: _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_6__.default,
+        alt: "greenTriangles"
       })]
     }), props.children]
   });
@@ -2646,10 +2684,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Login)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/InputEmail */ "./resources/js/components/atom/InputEmail.jsx");
 /* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _images_google_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/google-logo.png */ "./resources/images/google-logo.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
 
 function _nonIterableRest() { throw new TypeError("Invalid attempt to destructure non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
@@ -2668,6 +2707,7 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Login() {
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(null),
       _useState2 = _slicedToArray(_useState, 2),
@@ -2679,36 +2719,56 @@ function Login() {
       email = _useState4[0],
       setEmail = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h1", {
+      className: "welcome",
+      children: ["Welcome", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "to", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "moticker!!"]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("div", {
       className: "loginContainer",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("ul", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("ul", {
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+            className: "LoginButton",
+            to: "#",
+            children: "\u30ED\u30B0\u30A4\u30F3"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(_atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__.default, {
             className: "formMail",
             submitValue: 'ログイン'
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
             className: "sendAuthenticationEmail",
             to: "/auth",
             children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
             className: "googleLogin",
-            to: "http://google.com",
-            children: "google\u3067\u30ED\u30B0\u30A4\u30F3"
+            to: "#",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("span", {
+              children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("img", {
+                className: "GoogleIcon",
+                src: _images_google_logo_png__WEBPACK_IMPORTED_MODULE_3__.default,
+                alt: "GoogleIcon"
+              })
+            }), "google\u3067\u30ED\u30B0\u30A4\u30F3"]
           })
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("li", {
-          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
-            className: "workSpaceCreate",
-            to: "/workspaceCreate",
-            children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("li", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("div", {
+            className: "workSpaceCreateContain",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("p", {
+              children: "\u306F\u3058\u3081\u3066\u306E\u65B9\u306F\u3053\u3061\u3089"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+              className: "workSpaceCreate",
+              to: "/workspaceCreate",
+              children: "\u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u3092\u4F5C\u6210"
+            })]
           })
         })]
       })
-    })
+    })]
   });
 }
 
@@ -3135,9 +3195,24 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/images/brownboll.svg":
+/***/ "./resources/images/google-logo.png":
+/*!******************************************!*\
+  !*** ./resources/images/google-logo.png ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/google-logo.png?4088374ae1f43dc941476ca67c19a10c");
+
+/***/ }),
+
+/***/ "./resources/images/greenBall.svg":
 /*!****************************************!*\
-  !*** ./resources/images/brownboll.svg ***!
+  !*** ./resources/images/greenBall.svg ***!
   \****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3146,7 +3221,22 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/brownboll.svg?de7ea241514a85b7891d36fd70c07def");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/greenBall.svg?51e499497899fad3e94802555556e3bc");
+
+/***/ }),
+
+/***/ "./resources/images/greenTriangles.svg":
+/*!*********************************************!*\
+  !*** ./resources/images/greenTriangles.svg ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/greenTriangles.svg?792b5455fb56d29bc3dbadba9bae0970");
 
 /***/ }),
 
@@ -3165,9 +3255,9 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./resources/images/orangeboll.svg":
+/***/ "./resources/images/orangeBall.svg":
 /*!*****************************************!*\
-  !*** ./resources/images/orangeboll.svg ***!
+  !*** ./resources/images/orangeBall.svg ***!
   \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
@@ -3176,14 +3266,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangeboll.svg?6973353ad3a923d6d5532a3d91498902");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangeBall.svg?95a67ee832553c78f49f7a8a9a69992e");
 
 /***/ }),
 
-/***/ "./resources/images/orangebollBig.svg":
-/*!********************************************!*\
-  !*** ./resources/images/orangebollBig.svg ***!
-  \********************************************/
+/***/ "./resources/images/orangeTriangles.svg":
+/*!**********************************************!*\
+  !*** ./resources/images/orangeTriangles.svg ***!
+  \**********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3191,14 +3281,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangebollBig.svg?7cabb9c73f9ba2ff996c30456540bb17");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangeTriangles.svg?4b80c7ee7b19f324d21f450f877384e5");
 
 /***/ }),
 
-/***/ "./resources/images/orangebollsuperBig.svg":
-/*!*************************************************!*\
-  !*** ./resources/images/orangebollsuperBig.svg ***!
-  \*************************************************/
+/***/ "./resources/images/yellowBall.svg":
+/*!*****************************************!*\
+  !*** ./resources/images/yellowBall.svg ***!
+  \*****************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
@@ -3206,7 +3296,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/orangebollsuperBig.svg?bf7d81005e65d96d0d66f2cf76e64069");
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ("/images/yellowBall.svg?b0b22bdfbbcd3c67a9cacd43b80b93c3");
 
 /***/ }),
 

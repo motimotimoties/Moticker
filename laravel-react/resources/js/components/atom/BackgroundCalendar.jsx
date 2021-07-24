@@ -1,17 +1,24 @@
 import React from 'react';
 import { children } from 'react';
-import orangeSmallboll from '../../../images/orangeboll.svg'
-import orangeBigboll from '../../../images/orangebollBig.svg'
-import orangesuperBigboll from '../../../images/orangebollsuperBig.svg'
+import logo from '../../../images/logo.png'
+import yellowBall from '../../../images/yellowBall.svg'
+import orangeBall from '../../../images/orangeBall.svg'
+import greenBall from '../../../images/greenBall.svg'
+import orangeTriangles from '../../../images/orangeTriangles.svg'
+import greenTriangles from '../../../images/greenTriangles.svg'
 
 export default function BackgroundCalendar(props) {
 
     return (
             <div className='wrap-calendar'>
-                <div className='ballsAccountManagement'>
-                    <img className='orangeSmallboll' src={orangeSmallboll} alt="orange1"/>
-                    <img className='orangeBigboll' src={orangeBigboll} alt="orange2"/>
-                    <img className='orangesuperBigboll' src={orangesuperBigboll} alt="orange3" />
+                <div className='backgroundManagement'>
+                    <img className='logo' src={logo} alt="logoImage"/>
+                    <img className='yellowBall' src={yellowBall} alt="BigYellowBall"/>
+                    <img className='orangeBall' src={orangeBall} alt="BigorangeBall"/>
+                    <img className='greenBall' src={greenBall} alt="BiggreenBall"/>
+                    <img className='orangeTriangles' src={orangeTriangles} alt="OrangeTriangles"/>
+                    <img className='greenTriangles' src={greenTriangles} alt="GreenTriangles"/>
+                    <img className='smallYellowBall' src={yellowBall} alt="SmallYellowBall"/>
                 </div>
                     {props.children}
             </div>

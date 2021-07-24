@@ -19,6 +19,12 @@
     <!-- Styles -->
     <!-- <link href="{{ asset('react-calendar/dist/Calendar.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+
+    <!-- Googlefont -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <div id="app">
