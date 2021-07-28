@@ -2306,7 +2306,9 @@ function Signup() {
     axios__WEBPACK_IMPORTED_MODULE_0___default().post('api/signup', {
       id: id,
       name: name
-    }).then(function (response) {});
+    }).then(function (response) {
+      history.push('workspacesetting?id=' + response.data);
+    });
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {

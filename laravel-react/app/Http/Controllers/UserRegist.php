@@ -41,6 +41,9 @@ class UserRegist extends Controller
             $item->save();
         }
 
+        $mail_send = app()->make('App\Http\Controllers\Auth\RegisterController');
+        $mail_send->register($id);
+
         return response()->json($id);
     }
 
