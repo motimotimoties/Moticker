@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\UserRegist;
 use App\Http\Controllers\MakeworkspaceController;
+use App\Http\Controllers\RegisterController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -27,7 +28,6 @@ Route::post('/userCreate', [UserRegist::class, 'store']);
 Route::post('/userRegist', [UserRegist::class, 'regist']);
 Route::post('/signup', [UserRegist::class, 'signup']);
 
-
 Route::post('/makeworkspace', [MakeworkspaceController::class, 'store']);
 Route::post('/makeworkspace/update', [MakeworkspaceController::class, 'update']);
 Route::post('/makeworkspace/delete', [MakeworkspaceController::class, 'delete']);
@@ -39,3 +39,5 @@ Route::post('/shiftregist/delete', [ShiftregistController::class, 'dalete']);
 Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
 Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
 Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
+
+Route::get('/registermail/register', [RegisterController::class, 'register']);
