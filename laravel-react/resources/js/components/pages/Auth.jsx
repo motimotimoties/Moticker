@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React, { useState } from 'react';
-import { useHistory, useLocation, useParams } from 'react-router-dom';
+import { useHistory, useLocation, useParams, Link } from 'react-router-dom';
 import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function Auth(props) {
@@ -33,7 +33,20 @@ export default function Auth(props) {
     return (
         <BackgroundDesign>
             <div className="authContainer">
-                <input type="text" name="token" maxLength="6" autoFocus onChange={handleChange} />
+                <div className="wrap">
+                    <div className="base">
+                        <div className="message">
+                            <p>認証メールを送信しました。</p>
+                            <p>『 認証コード 』を入力してください。</p>
+                        </div>
+                    </div>
+                    <div className="base">
+                        <input type="text" name="token" maxLength="6" autoFocus onChange={handleChange} />
+                    </div>
+                    <div className="base">
+                        <Link to="login">ログイントップ</Link>
+                    </div>
+                </div>
             </div>
         </BackgroundDesign>
     )

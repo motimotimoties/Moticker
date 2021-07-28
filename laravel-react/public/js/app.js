@@ -2501,6 +2501,65 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ backgroundDesign)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/yellowBall.svg */ "./resources/images/yellowBall.svg");
+/* harmony import */ var _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/orangeBall.svg */ "./resources/images/orangeBall.svg");
+/* harmony import */ var _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/greenBall.svg */ "./resources/images/greenBall.svg");
+/* harmony import */ var _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../../../images/orangeTriangles.svg */ "./resources/images/orangeTriangles.svg");
+/* harmony import */ var _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../../images/greenTriangles.svg */ "./resources/images/greenTriangles.svg");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
+
+
+
+
+
+function backgroundDesign(props) {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("div", {
+    className: "wrap-login",
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsxs)("div", {
+      className: "backgroundManagement",
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        className: "yellowBall",
+        src: _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_1__.default,
+        alt: "BigYellowBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        className: "orangeBall",
+        src: _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_2__.default,
+        alt: "BigorangeBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        className: "greenBall",
+        src: _images_greenBall_svg__WEBPACK_IMPORTED_MODULE_3__.default,
+        alt: "BiggreenBall"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        className: "orangeTriangles",
+        src: _images_orangeTriangles_svg__WEBPACK_IMPORTED_MODULE_4__.default,
+        alt: "orangeTriangles"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_6__.jsx)("img", {
+        className: "greenTriangles",
+        src: _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_5__.default,
+        alt: "greenTriangles"
+      }), props.children]
+    })
+  });
+}
+
+/***/ }),
+
+/***/ "./resources/js/components/atom/BgLogin.jsx":
+/*!**************************************************!*\
+  !*** ./resources/js/components/atom/BgLogin.jsx ***!
+  \**************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ backgroundDesign)
+/* harmony export */ });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _images_logo_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../../images/logo.png */ "./resources/images/logo.png");
 /* harmony import */ var _images_yellowBall_svg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/yellowBall.svg */ "./resources/images/yellowBall.svg");
 /* harmony import */ var _images_orangeBall_svg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/orangeBall.svg */ "./resources/images/orangeBall.svg");
@@ -2519,13 +2578,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function backgroundDesign(props) {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("div", {
     className: "wrap-login",
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
-      className: "logoImg",
-      src: _images_logo_png__WEBPACK_IMPORTED_MODULE_1__.default,
-      alt: "LogoImage"
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsxs)("div", {
       className: "backgroundManagement",
       children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_7__.jsx)("img", {
         className: "logo",
@@ -2551,8 +2606,8 @@ function backgroundDesign(props) {
         className: "greenTriangles",
         src: _images_greenTriangles_svg__WEBPACK_IMPORTED_MODULE_6__.default,
         alt: "greenTriangles"
-      })]
-    }), props.children]
+      }), props.children]
+    })
   });
 }
 
@@ -2790,7 +2845,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _atom_InputEmail__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/InputEmail */ "./resources/js/components/atom/InputEmail.jsx");
-/* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
+/* harmony import */ var _atom_BgLogin__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atom/BgLogin */ "./resources/js/components/atom/BgLogin.jsx");
 /* harmony import */ var _images_google_logo_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../../images/google-logo.png */ "./resources/images/google-logo.png");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -2823,7 +2878,7 @@ function Login() {
       email = _useState4[0],
       setEmail = _useState4[1];
 
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)(_atom_BgLogin__WEBPACK_IMPORTED_MODULE_2__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxs)("h1", {
       className: "welcome",
       children: ["Welcome", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "to", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_4__.jsx)("br", {}), "moticker!!"]
@@ -3273,6 +3328,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
 /* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 function _slicedToArray(arr, i) { return _arrayWithHoles(arr) || _iterableToArrayLimit(arr, i) || _unsupportedIterableToArray(arr, i) || _nonIterableRest(); }
@@ -3286,6 +3342,7 @@ function _arrayLikeToArray(arr, len) { if (len == null || len > arr.length) len 
 function _iterableToArrayLimit(arr, i) { var _i = arr == null ? null : typeof Symbol !== "undefined" && arr[Symbol.iterator] || arr["@@iterator"]; if (_i == null) return; var _arr = []; var _n = true; var _d = false; var _s, _e; try { for (_i = _i.call(arr); !(_n = (_s = _i.next()).done); _n = true) { _arr.push(_s.value); if (i && _arr.length === i) break; } } catch (err) { _d = true; _e = err; } finally { try { if (!_n && _i["return"] != null) _i["return"](); } finally { if (_d) throw _e; } } return _arr; }
 
 function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
+
 
 
 
@@ -3323,12 +3380,34 @@ function Auth(props) {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "authContainer",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-        type: "text",
-        name: "token",
-        maxLength: "6",
-        autoFocus: true,
-        onChange: handleChange
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "wrap",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "base",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+            className: "message",
+            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              children: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1\u3057\u307E\u3057\u305F\u3002"
+            }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+              children: "\u300E \u8A8D\u8A3C\u30B3\u30FC\u30C9 \u300F\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+            })]
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "base",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "text",
+            name: "token",
+            maxLength: "6",
+            autoFocus: true,
+            onChange: handleChange
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+          className: "base",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_5__.Link, {
+            to: "login",
+            children: "\u30ED\u30B0\u30A4\u30F3\u30C8\u30C3\u30D7"
+          })
+        })]
       })
     })
   });

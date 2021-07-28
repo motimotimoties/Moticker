@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import InputEmail from '../atom/InputEmail';
-import BackgroundDesign from '../atom/BackgroundDesign';
+import BackgroundDesign from '../atom/BgLogin';
 import GoogleIcon from '../../../images/google-logo.png';
 
 export default function Login() {

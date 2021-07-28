@@ -1,5 +1,6 @@
 import React from "react";
 import { Children } from "react";
+import logo from "../../../images/logo.png";
 import yellowBall from "../../../images/yellowBall.svg";
 import orangeBall from "../../../images/orangeBall.svg";
 import greenBall from "../../../images/greenBall.svg";
@@ -10,6 +11,7 @@ export default function backgroundDesign(props) {
     return (
         <div className="wrap-login">
             <div className="backgroundManagement">
+                <img className="logo" src={logo} alt="logoImage" />
                 <img
                     className="yellowBall"
                     src={yellowBall}
