@@ -32,3 +32,10 @@ Route::post('/makeworkspace', [MakeworkspaceController::class, 'store']);
 Route::post('/makeworkspace/update', [MakeworkspaceController::class, 'update']);
 Route::post('/makeworkspace/delete', [MakeworkspaceController::class, 'delete']);
 
+Route::post('/shiftregist', [ShiftregistController::class, 'store']);
+Route::post('/shiftregist/update', [ShiftregistController::class, 'update']);
+Route::post('/shiftregist/delete', [ShiftregistController::class, 'dalete']);
+
+Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
+Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
+Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
