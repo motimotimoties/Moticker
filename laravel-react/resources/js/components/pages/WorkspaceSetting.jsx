@@ -22,7 +22,7 @@ export default function WorkspaceSetting() {
                 name: name,
             })
             .then(function (response) {
-                history.push("shiftcalendar?id=" + response.data);
+                history.push("shiftcalendar?name=" + response.data);
             });
     };
 
