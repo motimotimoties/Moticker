@@ -434,6 +434,14 @@ body {
   left: -20%;
 }
 
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15vh;
+  padding-left: 22%;
+}
+
 .wrap-login .loginContainer {
   height: 60%;
   width: 22vw;
@@ -447,13 +455,6 @@ body {
   position: relative;
   top: 11%;
   right: 10%;
-}
-.wrap-login .loginContainer .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15vh;
-  padding-left: 22%;
 }
 .wrap-login .loginContainer ul {
   list-style: none;
