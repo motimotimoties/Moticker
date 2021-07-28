@@ -76,8 +76,13 @@ class UserRegist extends Controller
             $user = new User;
             $user->email = $email;
             $user->name = $name;
+            $user->remember_token = Str::random(26);
             $user->save();
-    
+
+            $user_auth = User_auth::where('id', $user_auth_id)->first();
+            $user_auth->status = 0;
+            $user_auth->save();
+
             $id = $user->id;
     
             return response()->json($id);
