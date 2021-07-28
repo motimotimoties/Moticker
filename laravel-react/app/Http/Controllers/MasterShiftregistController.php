@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
-use App\Models\Undecided_shift;
+use App\Models\Decided_shift;
 
-class ShiftregistController extends Controller
+class MasterShiftregistController extends Controller
 {
     public function store(Request $request)
     {
@@ -20,14 +20,14 @@ class ShiftregistController extends Controller
 
         if(!$woid){
 
-            $undecided_shift = new undecided_shift;
-            $undecided_shift->user_id = $user_id;
-            $undecided_shift->date = $date;
-            $undecided_shift->enter_time = $enter_time;
-            $undecided_shift->exit_time = $exit_time;
-            $undecided_shift->save();
-            // $res = undecided_shift::select('id')->where('user_id', $user_id)->first();
-            $id = $undecided_shift->id;
+            $decided_shift = new Decided_shift;
+            $decided_shift->user_id = $user_id;
+            $decided_shift->date = $date;
+            $decided_shift->enter_time = $enter_time;
+            $decided_shift->exit_time = $exit_time;
+            $decided_shift->save();
+            // $res = decided_shift::select('id')->where('user_id', $user_id)->first();
+            $id = $decided_shift->id;
 
             return response()->json($id);
         }
@@ -41,14 +41,14 @@ class ShiftregistController extends Controller
         $exit_time = $request['exit_time'];
     	$id = $request['id'];
 
-        $undecided_shift = Undecided_shift::where('id', $id)->first();
+        $decided_shift = Decided_shift::where('id', $id)->first();
 
-        $undecided_shift -> user_id = $user_id;
-        $undecided_shift -> date = $date;
-        $undecided_shift -> enter_time = $enter_time;
-        $undecided_shift -> exit_time = $exit_time;
+        $decided_shift -> user_id = $user_id;
+        $decided_shift -> date = $date;
+        $decided_shift -> enter_time = $enter_time;
+        $decided_shift -> exit_time = $exit_time;
 
-        $undecided_shift -> save();
+        $decided_shift -> save();
 
         return response()->json($id);
     }
@@ -57,7 +57,7 @@ class ShiftregistController extends Controller
     {
     	$id = $request['id'];
 
-    	Undecided_shift::find($id)->delete();
+    	Decided_shift::find($id)->delete();
 
         return response()->json($id);
     }
