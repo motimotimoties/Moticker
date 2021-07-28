@@ -20,8 +20,8 @@ export default function Shiftcalendar() {
         {
             date: "2021-07-21",
             text: "バリオンさぼった",
-            time: "9:30~14:30"
-        }
+            time: "9:30~14:30",
+        },
     ]);
 
     const getFormData = (calendar) => {
