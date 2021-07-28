@@ -12,6 +12,299 @@ body {
 #app {
   height: 100%;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 700px;
+}
+
+.wrap-home {
+  height: 100%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.wrap-home .backgroundManagement {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  z-index: 0;
+}
+.wrap-home .backgroundManagement .logo {
+  height: 24vh;
+  z-index: 1;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+.wrap-home .backgroundManagement .yellowBall {
+  position: absolute;
+  height: 200%;
+  max-width: 100%;
+  top: -58%;
+  left: -15%;
+}
+.wrap-home .backgroundManagement .orangeBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 60%;
+  top: -25%;
+  right: 38%;
+}
+.wrap-home .backgroundManagement .greenBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 110%;
+  bottom: -60%;
+  right: -10%;
+}
+.wrap-home .backgroundManagement .orangeTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: -20%;
+  right: -13%;
+}
+.wrap-home .backgroundManagement .greenTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 120%;
+  bottom: -50%;
+  left: -20%;
+}
+.wrap-home .mainContent {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.wrap-home .mainContent .acountLogin {
+  height: 30vh;
+  width: 70vw;
+  margin: 18% auto 0 auto;
+  border: 2px solid #aaa;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+.wrap-home .mainContent .acountLogin h3 {
+  font-size: 150%;
+  margin: 0;
+  padding: 1.491% 10%;
+}
+.wrap-home .mainContent .acountLogin a {
+  font-size: 140%;
+}
+.wrap-home .mainContent .acountLogin .workspaceName {
+  height: 10vh;
+  border-bottom: 2px solid #aaa;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay img.companiesIcon {
+  max-width: 90px;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 1rem;
+  height: 4vh;
+  padding: 1.25% 7%;
+  margin: 0 5%;
+  font-weight: bold;
+  /* letter-spacing: 5px; */
+}
+.wrap-home .mainContent .acountLogin .acountDisplay a:hover {
+  background-color: #efefef;
+}
+.wrap-home .workspaceCreateSpace {
+  height: 15vh;
+  width: 70vw;
+  display: flex;
+  background-color: #fff;
+  margin: 5.5% auto 0 auto;
+  border: 2px solid #aaa;
+  border-radius: 1.2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap-home .workspaceCreateSpace img.logomaru {
+  max-width: 75px;
+}
+.wrap-home .workspaceCreateSpace h3 {
+  font-size: 120%;
+  padding: 1.491% 0;
+}
+.wrap-home .workspaceCreateSpace a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 1rem;
+  height: 4vh;
+  padding: 1.25% 2%;
+  margin: 0 5%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.wrap-home .workspaceCreateSpace a:hover {
+  background-color: #efefef;
+}
+.wrap-home .motickerDescriptionTitle {
+  height: 40vh;
+  width: 55vw;
+  background-color: #333;
+  border-radius: 0 8rem 8rem 0;
+  color: #fff;
+  margin-top: 30%;
+}
+.wrap-home .motickerDescriptionTitle h2 {
+  font-size: 190%;
+  margin: 0;
+  padding: 5%;
+}
+.wrap-home .motickerDescriptionTitle p {
+  font-size: 130%;
+  margin: 0;
+  padding: 2% 5% 0 15%;
+}
+.wrap-home .motickerDescriptionContainer {
+  height: 80vh;
+  margin: 8% 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent {
+  padding: 2%;
+  width: 23vw;
+  border-radius: 2rem;
+  border: 0.2px solid #eee;
+  /* box-shadow: 3px 3px 5px; */
+  /* box-shadow: 0.3rem 0.3rem 0.5rem #555, -0.5rem -0.5rem 0.5rem #ffffff; */
+  box-shadow: inset 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3), inset -0.2rem -0.2rem 1rem #fff;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits {
+  max-width: 23vw;
+  border-radius: 2rem;
+  /* box-shadow: inset 0.2rem 0.2rem 1rem rgb(0 0 0 / 30%), inset -0.2rem -0.2rem 1rem #fff; */
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3), -0.2rem -0.2rem 1rem #fff;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.lemon {
+  background-color: #ffa;
+  background: linear-gradient(145deg, #ffffff, #ff7, #ee6);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.lime {
+  background-color: #dfc;
+  background: linear-gradient(145deg, #ffffff, #cfb, #bea);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.orange {
+  background-color: #fdc;
+  background: linear-gradient(145deg, #ffffff, #fcb, #eba);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent p {
+  font-size: 180%;
+  font-weight: bold;
+}
+.wrap-home footer {
+  height: 120vh;
+  position: relative;
+  margin-top: 20%;
+}
+.wrap-home footer .footerLogo {
+  height: 24vh;
+  z-index: 3;
+  position: absolute;
+  top: 12%;
+  left: 5%;
+}
+.wrap-home footer img.footerYellowBall {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+  max-height: 135%;
+  height: 300%;
+  left: -7%;
+}
+.wrap-home footer img.footerOrangeBall {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+  max-height: 180%;
+  height: 70%;
+  top: 11.5%;
+  right: -10%;
+}
+.wrap-home footer img.footerGreenBall01 {
+  position: absolute;
+  max-width: 100%;
+  z-index: 2;
+  max-height: 40%;
+  height: 300%;
+  bottom: -10%;
+  right: 10%;
+}
+.wrap-home footer img.footerGreenBall02 {
+  position: absolute;
+  max-width: 100%;
+  z-index: 0;
+  max-height: 60%;
+  height: 300%;
+  top: -5%;
+  right: 20%;
+}
+.wrap-home footer img.footerOrangeTriangles {
+  position: absolute;
+  max-width: 100%;
+  z-index: 2;
+  max-height: 80%;
+  height: 300%;
+  transform: rotate(-120deg);
+  top: -20%;
+  left: -15%;
+}
+.wrap-home footer .sitemap {
+  height: 60vh;
+  width: 90vw;
+  position: relative;
+  z-index: 3;
+  top: 40%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.wrap-home footer .sitemap h1 {
+  color: #fff;
+  position: relative;
+  font-size: 4rem;
+  font-weight: normal;
+  top: 35%;
+  text-align: center;
+}
+.wrap-home footer .form {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  font-size: 1rem;
+  height: 6vh;
+  width: 90%;
+  bottom: -45%;
+  margin: 0 0 0 4%;
+}
+.wrap-home footer .form a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 3%;
+  width: 11%;
+}
+.wrap-home footer .form p {
+  font-size: 0.9rem;
+  margin: 0 0 0 50%;
 }
 
 .wrap-login {
@@ -22,7 +315,7 @@ body {
 }
 .wrap-login .logo {
   height: 20vh;
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   bottom: 5%;
   left: 43%;
@@ -74,7 +367,7 @@ body {
 }
 .wrap-calendar .logo {
   height: 20vh;
-  z-index: 2;
+  z-index: 1;
   position: absolute;
   bottom: 7%;
   left: 43%;
