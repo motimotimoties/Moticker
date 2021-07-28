@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
 import BackgroundCalendar from "../atom/BackgroundCalendar";
+import TimeModal from "../modules/TimeModal";
 
 export default function Shiftcalendar() {
     const [value, onChange] = useState(new Date());
     const [date, setData] = useState(new Date());
+
+    const [showModal, setShowModal] = useState(false);
 
     const [monthItem, setMonthItem] = useState([
         {
@@ -36,26 +39,6 @@ export default function Shiftcalendar() {
     };
 
     const TileContent = ({ activeStartDate, date, view }) => {
-        // stateの配列を取り出す
-        // for (let i = 0; i <= monthItem.length; i++) {
-        //     // stateのdateをdate型にする
-        //     let calendar = new Date(monthItem[i].date);
-        //     // dateのあてはまる日付にtextとtimeを出力
-        //     return view === 'month' && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2] ?
-        //     <div>{monthItem[i].text}<br/>{monthItem[i].time}</div> : null
-        // }
-
-        // monthItem.map((data) => {
-        //     let calendar = new Date(data.date)
-        //     if (view === 'month' && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2]) {
-        //         return (
-        //             <div>test{data.text}<br/>{data.time}{console.log(data.text)}</div>
-        //         )
-        //     } else {
-        //         null
-        //     }
-        //     // return <div>{data.text}{console.log(data)}</div>
-        // })
         return (
             <div className="contain-shift-subject">
                 {monthItem.reduce((acc, curr) => {
@@ -78,6 +61,14 @@ export default function Shiftcalendar() {
         );
     };
 
+    const onClickDay = () => {
+        setShowModal(true);
+    };
+
+    const handleClickClose = () => {
+        setShowModal(false);
+    };
+
     return (
         <BackgroundCalendar>
             {console.log(value)}
@@ -89,8 +80,14 @@ export default function Shiftcalendar() {
                     tileContent={TileContent}
                     depth="Year"
                     calendarType="Hebrew"
+                    onClickDay={onClickDay}
                 />
             </div>
+            <TimeModal
+                showModal={showModal}
+                inside={value}
+                handleClickClose={handleClickClose}
+            />
         </BackgroundCalendar>
     );
 }
