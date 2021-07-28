@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Workspace;
+use Illuminate\Support\Facades\Cookie;
 
 class MakeworkspaceController extends Controller
 {
@@ -25,7 +26,11 @@ class MakeworkspaceController extends Controller
 		$user->workspace_id = $id;
 		$user->save();
 
-    	return response()->json($id);
+		$user_token = User::select('remember_token')->where('id', $user_id)->first();
+
+		Cookie::queue('key', $user_token, 999999);
+
+    	return response()->json($name);
     }
 
     public function update(Request $request)
