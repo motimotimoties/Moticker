@@ -5,6 +5,9 @@ import Login from './components/pages/Login';
 import Home from './components/pages/Home';
 import WorkspaceCreate from './components/pages/WorkspaceCreate';
 import Auth from './components/pages/auth';
+import Signup from './components/pages/Signup';
+import WorkspaceSetting from './components/pages/WorkspaceSetting';
+import Shiftcalendar from './components/pages/Shiftcalendar';
 
 function App() {
     return (
@@ -12,8 +15,11 @@ function App() {
             <Switch>
                 <Route exact path='/' component={Home} />
                 <Route path='/login' component={Login} />
-                <Route path='/workspaceCreate' component={WorkspaceCreate} />
+                <Route path='/workspacecreate' component={WorkspaceCreate} />
                 <Route path='/auth' component={Auth} />
+                <Route path='/shiftcalendar' component={Shiftcalendar} />
+                <Route path='/signup' component={Signup} />
+                <Route path='/workspacesetting' component={WorkspaceSetting} />
             </Switch>
         </BrowserRouter>
     )

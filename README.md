@@ -32,7 +32,12 @@ storageへのアクセスを許可する
 
 React用のnpmをインストールする
 
-` npm install `
+` npm update `
+<!-- 
+` npm i --save-dev laravel-mix@latest && 
+npm i --save-dev sass-loader@latest && 
+npm i --save-dev postcss@latest && 
+npm i --save-dev webpack@latest ` -->
 
 ## サーバー
 アプリサーバー

@@ -1,89 +1,474 @@
 html {
   height: 100%;
 }
-html body {
+
+body {
   height: 100%;
   width: 100%;
   margin: 0;
   overflow: hidden;
 }
-html body #app {
+
+#app {
   height: 100%;
   width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  max-height: 700px;
 }
-html body #app .wrap {
+
+.wrap-home {
   height: 100%;
-  background-color: #FFA500;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+.wrap-home .backgroundManagement {
+  min-height: 100vh;
+  min-width: 100vw;
+  position: relative;
+  z-index: 0;
+}
+.wrap-home .backgroundManagement .logo {
+  height: 24vh;
+  z-index: 1;
+  position: absolute;
+  top: 7%;
+  left: 5%;
+}
+.wrap-home .backgroundManagement .yellowBall {
+  position: absolute;
+  height: 200%;
+  max-width: 100%;
+  top: -58%;
+  left: -15%;
+}
+.wrap-home .backgroundManagement .orangeBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 60%;
+  top: -25%;
+  right: 38%;
+}
+.wrap-home .backgroundManagement .greenBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 110%;
+  bottom: -60%;
+  right: -10%;
+}
+.wrap-home .backgroundManagement .orangeTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: -20%;
+  right: -13%;
+}
+.wrap-home .backgroundManagement .greenTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 120%;
+  bottom: -50%;
+  left: -20%;
+}
+.wrap-home .mainContent {
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+.wrap-home .mainContent .acountLogin {
+  height: 30vh;
+  width: 70vw;
+  margin: 18% auto 0 auto;
+  border: 2px solid #aaa;
+  border-radius: 1.5rem;
+  background-color: #fff;
+}
+.wrap-home .mainContent .acountLogin h3 {
+  font-size: 150%;
+  margin: 0;
+  padding: 1.491% 10%;
+}
+.wrap-home .mainContent .acountLogin a {
+  font-size: 140%;
+}
+.wrap-home .mainContent .acountLogin .workspaceName {
+  height: 10vh;
+  border-bottom: 2px solid #aaa;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay {
+  height: 20vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay img.companiesIcon {
+  max-width: 90px;
+}
+.wrap-home .mainContent .acountLogin .acountDisplay a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 1rem;
+  height: 4vh;
+  padding: 1.25% 7%;
+  margin: 0 5%;
+  font-weight: bold;
+  /* letter-spacing: 5px; */
+}
+.wrap-home .mainContent .acountLogin .acountDisplay a:hover {
+  background-color: #efefef;
+}
+.wrap-home .workspaceCreateSpace {
+  height: 15vh;
+  width: 70vw;
+  display: flex;
+  background-color: #fff;
+  margin: 5.5% auto 0 auto;
+  border: 2px solid #aaa;
+  border-radius: 1.2rem;
+  justify-content: space-around;
+  align-items: center;
+}
+.wrap-home .workspaceCreateSpace img.logomaru {
+  max-width: 75px;
+}
+.wrap-home .workspaceCreateSpace h3 {
+  font-size: 120%;
+  padding: 1.491% 0;
+}
+.wrap-home .workspaceCreateSpace a {
+  color: #000;
+  text-decoration: none;
+  border: 1px solid;
+  border-radius: 1rem;
+  height: 4vh;
+  padding: 1.25% 2%;
+  margin: 0 5%;
+  font-size: 100%;
+  font-weight: bold;
+}
+.wrap-home .workspaceCreateSpace a:hover {
+  background-color: #efefef;
+}
+.wrap-home .motickerDescriptionTitle {
+  height: 40vh;
+  width: 55vw;
+  background-color: #333;
+  border-radius: 0 8rem 8rem 0;
+  color: #fff;
+  margin-top: 30%;
+}
+.wrap-home .motickerDescriptionTitle h2 {
+  font-size: 190%;
+  margin: 0;
+  padding: 5%;
+}
+.wrap-home .motickerDescriptionTitle p {
+  font-size: 130%;
+  margin: 0;
+  padding: 2% 5% 0 15%;
+}
+.wrap-home .motickerDescriptionContainer {
+  height: 80vh;
+  margin: 8% 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent {
+  padding: 2%;
+  width: 23vw;
+  border-radius: 2rem;
+  border: 0.2px solid #eee;
+  /* box-shadow: 3px 3px 5px; */
+  /* box-shadow: 0.3rem 0.3rem 0.5rem #555, -0.5rem -0.5rem 0.5rem #ffffff; */
+  box-shadow: inset 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3), inset -0.2rem -0.2rem 1rem #fff;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits {
+  max-width: 23vw;
+  border-radius: 2rem;
+  /* box-shadow: inset 0.2rem 0.2rem 1rem rgb(0 0 0 / 30%), inset -0.2rem -0.2rem 1rem #fff; */
+  box-shadow: 0.2rem 0.2rem 1rem rgba(0, 0, 0, 0.3), -0.2rem -0.2rem 1rem #fff;
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.lemon {
+  background-color: #ffa;
+  background: linear-gradient(145deg, #ffffff, #ff7, #ee6);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.lime {
+  background-color: #dfc;
+  background: linear-gradient(145deg, #ffffff, #cfb, #bea);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent img.fruits.orange {
+  background-color: #fdc;
+  background: linear-gradient(145deg, #ffffff, #fcb, #eba);
+}
+.wrap-home .motickerDescriptionContainer .descriptionContent p {
+  font-size: 180%;
+  font-weight: bold;
+}
+.wrap-home footer {
+  height: 120vh;
+  position: relative;
+  margin-top: 20%;
+}
+.wrap-home footer .footerLogo {
+  height: 24vh;
+  z-index: 3;
+  position: absolute;
+  top: 12%;
+  left: 5%;
+}
+.wrap-home footer img.footerYellowBall {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+  max-height: 135%;
+  height: 300%;
+  left: -7%;
+}
+.wrap-home footer img.footerOrangeBall {
+  position: absolute;
+  max-width: 100%;
+  z-index: 1;
+  max-height: 180%;
+  height: 70%;
+  top: 11.5%;
+  right: -10%;
+}
+.wrap-home footer img.footerGreenBall01 {
+  position: absolute;
+  max-width: 100%;
+  z-index: 2;
+  max-height: 40%;
+  height: 300%;
+  bottom: -10%;
+  right: 10%;
+}
+.wrap-home footer img.footerGreenBall02 {
+  position: absolute;
+  max-width: 100%;
+  z-index: 0;
+  max-height: 60%;
+  height: 300%;
+  top: -5%;
+  right: 20%;
+}
+.wrap-home footer img.footerOrangeTriangles {
+  position: absolute;
+  max-width: 100%;
+  z-index: 2;
+  max-height: 80%;
+  height: 300%;
+  transform: rotate(-120deg);
+  top: -20%;
+  left: -15%;
+}
+.wrap-home footer .sitemap {
+  height: 60vh;
+  width: 90vw;
+  position: relative;
+  z-index: 3;
+  top: 40%;
+  margin: 0 auto;
+  border-radius: 2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+.wrap-home footer .sitemap h1 {
+  color: #fff;
+  position: relative;
+  font-size: 4rem;
+  font-weight: normal;
+  top: 35%;
+  text-align: center;
+}
+.wrap-home footer .form {
+  display: flex;
+  position: relative;
+  z-index: 3;
+  font-size: 1rem;
+  height: 6vh;
+  width: 90%;
+  bottom: -45%;
+  margin: 0 0 0 4%;
+}
+.wrap-home footer .form a {
+  color: #000;
+  text-decoration: none;
+  margin-left: 3%;
+  width: 11%;
+}
+.wrap-home footer .form p {
+  font-size: 0.9rem;
+  margin: 0 0 0 50%;
+}
+
+.wrap-login {
+  height: 100%;
+  background-color: #FFF;
   display: flex;
   justify-content: center;
 }
-html body #app .wrap .logoImg {
+.wrap-login .logo {
   height: 20vh;
   z-index: 1;
   position: absolute;
-  top: 5%;
+  bottom: 5%;
   left: 43%;
 }
-html body #app .wrap .ballsAccountManagement {
-  width: 90%;
-  height: 170%;
-  overflow: hidden;
-  z-index: 0;
+.wrap-login .yellowBall {
   position: absolute;
-  bottom: -30%;
-  left: 15%;
-}
-html body #app .wrap .ballsAccountManagement .brownboll {
-  position: absolute;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
   max-width: 100%;
-  top: 50%;
+  top: -50%;
+  left: -18%;
 }
-html body #app .wrap .ballsAccountManagement .orangeSmallboll {
+.wrap-login .orangeBall {
+  z-index: 1;
   position: absolute;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
-  max-width: 10%;
-  max-height: auto;
-  top: 30%;
-  right: 30%;
+  max-width: 100%;
+  max-height: 55%;
+  top: -25%;
+  left: 35%;
 }
-html body #app .wrap .ballsAccountManagement .orangeBigboll {
+.wrap-login .greenBall {
+  z-index: 1;
   position: absolute;
-  transform: translateX(-50%);
-  transform: translateY(-50%);
-  max-width: 25%;
-  max-height: auto;
-  top: 45%;
-  right: 0%;
+  max-width: 100%;
+  max-height: 95%;
+  bottom: -40%;
+  right: -5%;
+}
+.wrap-login .orangeTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: -20%;
+  right: -15%;
+}
+.wrap-login .greenTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  bottom: -25%;
+  left: -10%;
+}
+
+.wrap-calendar {
+  height: 100%;
+  background-color: #FFF;
+  display: flex;
+  justify-content: center;
+}
+.wrap-calendar .logo {
+  height: 20vh;
+  z-index: 1;
+  position: absolute;
+  bottom: 7%;
+  left: 43%;
+}
+.wrap-calendar .yellowBall {
+  position: absolute;
+  max-width: 90%;
+  top: -105%;
+  left: -8%;
+}
+.wrap-calendar .orangeBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 55%;
+  bottom: -25%;
+  left: -15%;
+}
+.wrap-calendar .greenBall {
+  z-index: 1;
+  position: absolute;
+  max-width: 45%;
+  bottom: -40%;
+  right: -5%;
+}
+.wrap-calendar .orangeTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  top: -20%;
+  right: -15%;
+}
+.wrap-calendar .greenTriangles {
+  z-index: 1;
+  position: absolute;
+  max-width: 100%;
+  max-height: 100%;
+  transform: rotate(90deg);
+  top: -25%;
+  left: -10%;
+}
+.wrap-calendar .smallYellowBall {
+  z-index: 2;
+  position: absolute;
+  max-width: 30%;
+  bottom: -25%;
+  right: 10%;
+}
+
+.welcome {
+  z-index: 2;
+  font-family: "Fredoka One", cursive;
+  line-height: 130%;
+  font-weight: bold;
+  letter-spacing: 0.3rem;
+  font-size: 600%;
+  text-align: right;
+  position: relative;
+  color: #432;
+  left: -20%;
 }
 
 .loginContainer {
-  height: 100%;
+  height: 60%;
+  width: 22%;
   margin: 0;
+  padding: 4% 5%;
   z-index: 20;
   display: flex;
   justify-content: center;
+  border-radius: 50px;
+  background-color: #FFF;
   position: relative;
-  top: 36%;
+  top: 11%;
+  right: 10%;
 }
 .loginContainer ul {
   list-style: none;
+  height: 100%;
   width: 100%;
   padding: 0;
+  margin: 0;
 }
 .loginContainer ul li {
   text-align: center;
-  margin-bottom: 8%;
-  height: 6%;
-  font-size: 100%;
+  width: 100%;
+  margin-bottom: 3%;
+  padding-bottom: 3%;
+  height: 10%;
+  font-size: 90%;
+  overflow: hidden;
+}
+.loginContainer ul li:first-child, .loginContainer ul li:nth-child(2), .loginContainer ul li:nth-child(4) {
+  margin-bottom: 10%;
 }
 .loginContainer ul li:last-child {
+  height: 29%;
   margin-bottom: 0;
 }
 .loginContainer ul li input {
-  width: 100%;
   background-color: transparent;
   border: none;
   border-bottom: 0.1rem solid #707070;
@@ -92,42 +477,326 @@ html body #app .wrap .ballsAccountManagement .orangeBigboll {
 }
 .loginContainer ul li a {
   height: 100%;
+  width: 90%;
+  margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 1rem;
   transition: 0.2s;
+  box-shadow: 4px 4px 4px #aaa;
   text-decoration: none;
+}
+.loginContainer ul li a span {
+  border-right: 1px solid #aaa;
+  padding-right: 7%;
+  margin-right: 5%;
+}
+.loginContainer ul li a span img {
+  display: flex;
+  align-items: center;
+  max-height: 1.3rem;
 }
 .loginContainer ul li a:hover {
   text-decoration: none;
-  transform: scale(0.97);
+  box-shadow: 1.5px 1.5px 5px #aaa;
+  position: relative;
+  top: 2%;
+}
+.loginContainer ul .LoginButton {
+  background-color: #333;
+  color: #eee;
 }
 .loginContainer ul .sendAuthenticationEmail {
   background-color: #707070;
   color: #eee;
+  margin-bottom: 10%;
 }
 .loginContainer ul .googleLogin {
-  background-color: #fff;
-  color: #333;
+  padding-right: 15%;
+  width: 75%;
+  background-color: #f5f5f5;
+  color: #432;
 }
-.loginContainer ul .workSpaceCreate {
+.loginContainer ul .workSpaceCreateContain {
+  border: 1px solid #FFE500;
+  border-radius: 1rem;
+  padding: 5%;
+}
+.loginContainer ul .workSpaceCreateContain p {
+  margin: 0 0 2.5% 10%;
+  text-align: left;
+  font-size: 90%;
+}
+.loginContainer ul .workSpaceCreateContain .workSpaceCreate {
   background-color: #FFA500;
   color: #eee;
+  height: 100%;
+  width: 100%;
+  padding: 1.7% 0;
 }
 
-.authContainer {
-  height: 5%;
+.workspaceCreateContainer {
+  height: 100%;
   margin: 0;
   z-index: 20;
-  display: flexbox;
+  display: flex;
   justify-content: center;
   position: relative;
   top: 36%;
 }
-.authContainer p {
+.workspaceCreateContainer p {
   color: #eee;
 }
-.authContainer input {
+.workspaceCreateContainer input {
   display: flex;
+}
+
+.authContainer {
+  height: 100%;
+  margin: 0;
+  z-index: 20;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  top: 36%;
+}
+.authContainer input {
+  width: 50%;
+  height: 1.5rem;
+  font-size: 2rem;
+  background-color: transparent;
+  border: none;
+  border-bottom: 0.1rem solid #707070;
+  outline: none;
+  color: #ddd;
+}
+
+.react-calendar {
+  height: 95%;
+  max-width: 65%;
+  background: white;
+  border: 1px solid #a0a096;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.2em;
+}
+.react-calendar .react-calendar__navigation__label:enabled:hover {
+  cursor: default;
+}
+.react-calendar .react-calendar__viewContainer {
+  display: flex;
+  height: 92%;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view {
+  height: 100%;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div {
+  height: 100%;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div {
+  height: 100%;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays {
+  height: 5%;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 0.75em;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays abbr {
+  text-decoration: none;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday:first-child abbr {
+  color: #ff5555;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__weekdays .react-calendar__month-view__weekdays__weekday:last-child abbr {
+  color: #5555ff;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div .react-calendar__month-view__days {
+  height: 19%;
+}
+
+.react-calendar--doubleView {
+  width: 65%;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer {
+  display: flex;
+  margin: -0.5em;
+}
+
+.react-calendar--doubleView .react-calendar__viewContainer > * {
+  width: 100%;
+  margin: 0.5em;
+}
+
+.react-calendar,
+.react-calendar *,
+.react-calendar *:before,
+.react-calendar *:after {
+  box-sizing: border-box;
+}
+
+.react-calendar button {
+  height: 100%;
+  margin: 0;
+  border: 0;
+  outline: none;
+}
+
+.react-calendar button:enabled:hover {
+  cursor: pointer;
+}
+
+.react-calendar__navigation {
+  height: 8%;
+  margin: 0;
+  border-bottom: 2px solid #eee;
+}
+.react-calendar__navigation .react-calendar__navigation__prev-button,
+.react-calendar__navigation .react-calendar__navigation__next-button {
+  background-color: #fafafa;
+  width: 6%;
+}
+
+.react-calendar__navigation__prev2-button,
+.react-calendar__navigation__next2-button {
+  width: 0;
+  color: rgba(0, 0, 0, 0);
+}
+
+.react-calendar__navigation button {
+  font-size: 2rem;
+  font-weight: bold;
+  padding: 0;
+  background: none;
+}
+
+.react-calendar__navigation__prev-button:enabled:hover,
+.react-calendar__navigation__prev-button:enabled:focus {
+  background-color: #efefef;
+  border: 1px solid #a0a096;
+}
+
+.react-calendar__navigation__next-button:enabled:hover,
+.react-calendar__navigation__next-button:enabled:focus {
+  background-color: #efefef;
+  border: 1px solid #a0a096;
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__month-view__weekdays__weekday {
+  padding: 0.5em;
+}
+
+.react-calendar__month-view__weekNumbers {
+  font-weight: bold;
+}
+
+.react-calendar__month-view__weekNumbers .react-calendar__tile {
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  font-size: 0.75em;
+}
+
+button.react-calendar__tile.react-calendar__month-view__days__day {
+  border: 0.5px solid #f5f5f5;
+}
+
+.react-calendar__month-view__days__day--weekend {
+  color: none;
+}
+
+.react-calendar__month-view__days__day--neighboringMonth {
+  color: #efefef;
+}
+
+.react-calendar__year-view .react-calendar__tile,
+.react-calendar__decade-view .react-calendar__tile,
+.react-calendar__century-view .react-calendar__tile {
+  padding: 2em 0.5em;
+}
+
+.react-calendar__tile {
+  width: 100%;
+  text-align: left;
+  padding: 0.75em 0.5em;
+  background: none;
+}
+.react-calendar__tile:nth-child(1), .react-calendar__tile:nth-child(8), .react-calendar__tile:nth-child(15), .react-calendar__tile:nth-child(22), .react-calendar__tile:nth-child(29) {
+  background-color: #fff7f7;
+}
+.react-calendar__tile:nth-child(7), .react-calendar__tile:nth-child(14), .react-calendar__tile:nth-child(21), .react-calendar__tile:nth-child(28), .react-calendar__tile:nth-child(35) {
+  background-color: #f7f7ff;
+}
+
+.react-calendar__tile:disabled {
+  background-color: #f0f0f0;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background-color: #E7FFEE;
+}
+
+.react-calendar__tile--now {
+  justify-content: left;
+  padding: 0.2rem 0 0 0.2rem;
+}
+.react-calendar__tile--now abbr {
+  display: flex;
+  width: 33px;
+  height: 33px;
+  color: #fff;
+  background-color: #FFAA33;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  padding: 0.2rem 0 0 0.2rem;
+}
+.react-calendar__tile--now:enabled:hover abbr,
+.react-calendar__tile--now:enabled:focus abbr {
+  display: flex;
+  width: 33px;
+  height: 33px;
+  color: #fff;
+  background-color: #FFAA33;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+.react-calendar__tile--hasActive {
+  background: #C6F7D4;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background-color: #C6F7D4;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background-color: #C6F7D4;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #000;
+}
+
+.calendarContainer {
+  height: 100%;
+  margin: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

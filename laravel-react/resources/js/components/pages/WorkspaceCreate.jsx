@@ -1,42 +1,43 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useParams } from 'react-router-dom';
 import axios from 'axios';
 import InputEmail from '../atom/InputEmail';
 import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function WorkspaceCreate(props) {
 
+    // 必要なstateやhistoryを定義
     const [email, setEmail] = useState('')
-    const [id, setId] = useState('');
+    const history = useHistory()
 
+    // 入力されたときにstateを変更
     const handleChange = (e) => {
         setEmail(e.target.value)
     }
 
-    const handleSubmit = () => {
+    // submitされたとき
+    const handleSubmit = (e) => {
+        // enterによる遷移を無効
+        e.preventDefault()
+        // apiにemailを送信
         axios.post('/api/userCreate', {
             email: email
         })
         .then(function (response) {
-            setId(response.data);
+            // 帰ってきたidを認証用ページにパラメータとして送信
+            history.push('/auth?id='+response.data)
         })
-
-        props.router.push({
-            pathname: '/auth',
-            state: {id: id}
-        });
     }
 
     return (
         <BackgroundDesign>
-        <div>
-            <p>{email}</p>
-            <form onSubmit={handleSubmit}>
-                <input type="email" onChange={handleChange} autoFocus />
-                <input type="submit" value="登録" />
-            </form>
-            <Link to="/auth" />
-        </div>
+            <div className="workspaceCreateContainer">
+                <form onSubmit={handleSubmit}>
+                    <input type="email" name="email" onChange={handleChange} autoFocus />
+                    <input type="submit" value="登録" />
+                </form>
+                <Link to="/auth" />
+            </div>
         </BackgroundDesign>
     )
 }

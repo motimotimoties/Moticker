@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Workspace;
 
@@ -13,11 +14,16 @@ class MakeworkspaceController extends Controller
     	$user_id = $request['user_id'];
 
     	$workspace = new Workspace;
-    	$workspace -> name = $name;
-    	$workspace -> user_id = $user_id;
-    	$workspace -> save();
-    	$res = Workspace::select('id')->where('user_id', $user_id)->first();
-    	$id = $res->id;
+    	$workspace->name = $name;
+    	$workspace->user_id = $user_id;
+    	$workspace->save();
+
+    	// $res = Workspace::select('id')->where('user_id', $user_id)->first();
+    	$id = $workspace->id;
+		
+		$user = User::where('id', $user_id)->first();
+		$user->workspace_id = $id;
+		$user->save();
 
     	return response()->json($id);
     }
@@ -28,9 +34,7 @@ class MakeworkspaceController extends Controller
     	$user_id = $request['user_id'];
     	$id = $request['id'];
 
-    	Workspace::where('id', $id)
-    		->update(['name' => $name, 'user_id' => $user_id]);
-
+    	Workspace::where('id', $id)->update(['name' => $name, 'user_id' => $user_id]);
 		return response()->json($id);
     }
 

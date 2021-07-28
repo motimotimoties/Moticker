@@ -22,10 +22,13 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/user', [UserRegist::class, 'index']);
 
-
-
-Route::post('/Makeworkspace', [MakeworkspaceController::class, 'store']);
-Route::post('/Makeworkspace', [MakeworkspaceController::class, 'update']);
-Route::post('/Makeworkspace', [MakeworkspaceController::class, 'delete']);
-
 Route::post('/userCreate', [UserRegist::class, 'store']);
+
+Route::post('/userRegist', [UserRegist::class, 'regist']);
+Route::post('/signup', [UserRegist::class, 'signup']);
+
+
+Route::post('/makeworkspace', [MakeworkspaceController::class, 'store']);
+Route::post('/makeworkspace/update', [MakeworkspaceController::class, 'update']);
+Route::post('/makeworkspace/delete', [MakeworkspaceController::class, 'delete']);
+
