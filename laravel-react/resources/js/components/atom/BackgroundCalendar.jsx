@@ -19,8 +19,8 @@ export default function BackgroundCalendar(props) {
                     <img className='orangeTriangles' src={orangeTriangles} alt="OrangeTriangles"/>
                     <img className='greenTriangles' src={greenTriangles} alt="GreenTriangles"/>
                     <img className='smallYellowBall' src={yellowBall} alt="SmallYellowBall"/>
-                </div>
                     {props.children}
+                </div>
             </div>
     )
 }
