@@ -6,6 +6,7 @@ use App\Models\User;
 use Illuminate\Http\Request;
 use App\Models\Workspace;
 use Illuminate\Support\Facades\Cookie;
+use Illuminate\Support\Facades\Hash;
 
 class MakeworkspaceController extends Controller
 {
@@ -30,7 +31,9 @@ class MakeworkspaceController extends Controller
 
 		Cookie::queue('key', $user_token, 999999);
 
-    	return response()->json($name);
+		$hashId = Hash::make($id);
+
+    	return response()->json($hashId);
     }
 
     public function update(Request $request)
