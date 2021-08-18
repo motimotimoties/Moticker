@@ -2659,36 +2659,62 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function TimeModal(props) {
+  // const getFormDate = (calendar) => {
+  //     let year = calendar.getFullYear();
+  //     let month = calendar.getMonth();
+  //     let day = calendar.getDate();
+  //     // day = ('0' + day).slice(-2);
+  //     let formatDate = year + "-" + month + "-" + day;
+  //     // タイルに表示する内容の初期化
+  //     let message = "";
+  //     return [year, month, day];
+  // };
+  // 
+  var date = props.value;
+  var year = date.getFullYear();
+  var month = date.getMonth() + 1;
+  var day = ('0' + date.getDate()).slice(-2);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {
-    children: props.showModal ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
-      className: "modal",
+    children: props.showModal ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
       style: {
         position: 'absolute',
-        top: '50%',
-        left: '50%',
-        margin: '-250px 0 0 -250px',
-        zIndex: "9999",
-        width: "500px",
-        height: "500px",
-        border: "1px solid",
-        backgroundColor: "white"
+        top: '0%',
+        left: '0%',
+        height: '100vh',
+        width: '100vw',
+        zIndex: '9998',
+        backgroundColor: 'rgba(0, 0, 0, 0.5)'
       },
-      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        children: props.inside
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
-        children: "\u6642\u9593"
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-          type: "time",
-          name: "enter"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-          type: "time",
-          name: "exit"
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+        className: "modal",
+        style: {
+          position: 'absolute',
+          top: '50%',
+          left: '50%',
+          margin: '-250px 0 0 -250px',
+          zIndex: "9999",
+          width: "500px",
+          height: "500px",
+          border: "1px solid",
+          backgroundColor: "white"
+        },
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+          children: [year, "/", month, "/", day]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+          children: "\u6642\u9593"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "time",
+            name: "enter"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+            type: "time",
+            name: "exit"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
+          onClick: props.handleClickClose,
+          children: "\u9589\u3058\u308B"
         })]
-      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("button", {
-        onClick: props.handleClickClose,
-        children: "\u9589\u3058\u308B"
-      })]
+      })
     }) : /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.Fragment, {})
   });
 }
@@ -3002,7 +3028,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ Shiftcalendar)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/esm/index.js");
+/* harmony import */ var react_calendar__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react-calendar */ "./node_modules/react-calendar/dist/esm/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router/esm/react-router.js");
 /* harmony import */ var _atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/BackgroundCalendar */ "./resources/js/components/atom/BackgroundCalendar.jsx");
 /* harmony import */ var _modules_TimeModal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../modules/TimeModal */ "./resources/js/components/modules/TimeModal.jsx");
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
@@ -3032,11 +3059,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 
+
 function Shiftcalendar() {
+  var history = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useHistory)();
+  var location = (0,react_router_dom__WEBPACK_IMPORTED_MODULE_4__.useLocation)();
+
   var _useState = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date()),
       _useState2 = _slicedToArray(_useState, 2),
       value = _useState2[0],
-      onChange = _useState2[1];
+      setValue = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(new Date()),
       _useState4 = _slicedToArray(_useState3, 2),
@@ -3092,29 +3123,38 @@ function Shiftcalendar() {
     });
   };
 
-  var onClickDay = function onClickDay() {
+  var urlParam = window.location.search.substring(1);
+  var temp = urlParam.split("=");
+
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)(temp[1]),
+      _useState10 = _slicedToArray(_useState9, 2),
+      workspaceId = _useState10[0],
+      setWorkspaceId = _useState10[1];
+
+  var onClickDay = function onClickDay(e) {
+    setValue(e);
     setShowModal(true);
   };
 
   var handleClickClose = function handleClickClose() {
+    history.push("?id=" + workspaceId);
     setShowModal(false);
   };
 
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(_atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_1__.default, {
-    children: [console.log(value), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "calendarContainer",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_calendar__WEBPACK_IMPORTED_MODULE_4__.default, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_calendar__WEBPACK_IMPORTED_MODULE_5__.default, {
         locale: "ja-JP",
         value: value,
-        onChange: onChange,
         tileContent: TileContent,
         depth: "Year",
         calendarType: "Hebrew",
         onClickDay: onClickDay
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_modules_TimeModal__WEBPACK_IMPORTED_MODULE_2__.default, {
+      value: value,
       showModal: showModal,
-      inside: value,
       handleClickClose: handleClickClose
     })]
   });
@@ -3349,7 +3389,7 @@ function WorkspaceSetting() {
       user_id: userId,
       name: name
     }).then(function (response) {
-      history.push("shiftcalendar?name=" + response.data);
+      history.push("shiftcalendar?id=" + response.data);
     });
   };
 
@@ -42882,7 +42922,8 @@ function valueEqual(a, b) {
 /******/ 				}
 /******/ 				if(fulfilled) {
 /******/ 					deferred.splice(i--, 1)
-/******/ 					result = fn();
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
 /******/ 				}
 /******/ 			}
 /******/ 			return result;
