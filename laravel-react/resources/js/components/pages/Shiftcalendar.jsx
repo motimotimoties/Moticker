@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import { useHistory, useLocation } from "react-router-dom";
 import BackgroundCalendar from "../atom/BackgroundCalendar";
 import TimeModal from "../modules/TimeModal";
 
 export default function Shiftcalendar() {
-    const [value, onChange] = useState(new Date());
+    const history = useHistory();
+    const location = useLocation();
+    const [value, setValue] = useState(new Date());
     const [date, setData] = useState(new Date());
 
     const [showModal, setShowModal] = useState(false);
@@ -14,16 +17,19 @@ export default function Shiftcalendar() {
             date: "2021-07-15",
             text: "フォード寝坊",
             time: "9:30~10:00",
+            status: "1",
         },
         {
             date: "2021-07-17",
             text: "ビアガーデンバイト",
             time: "16:00~21:15",
+            status: "0",
         },
         {
             date: "2021-07-21",
             text: "バリオンさぼった",
             time: "9:30~14:30",
+            status: "0",
         },
     ]);
 
@@ -61,7 +67,8 @@ export default function Shiftcalendar() {
         );
     };
 
-    const onClickDay = () => {
+    const onClickDay = (e) => {
+        setValue(e);
         setShowModal(true);
     };
 
@@ -71,12 +78,10 @@ export default function Shiftcalendar() {
 
     return (
         <BackgroundCalendar>
-            {console.log(value)}
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"
                     value={value}
-                    onChange={onChange}
                     tileContent={TileContent}
                     depth="Year"
                     calendarType="Hebrew"
@@ -84,8 +89,8 @@ export default function Shiftcalendar() {
                 />
             </div>
             <TimeModal
+                value={value}
                 showModal={showModal}
-                inside={value}
                 handleClickClose={handleClickClose}
             />
         </BackgroundCalendar>
