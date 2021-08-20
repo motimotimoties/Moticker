@@ -369,7 +369,7 @@ body{
     justify-content: center;
     .logo{
         height: 20vh;
-        z-index: 1;
+        z-index: 5;
         position: absolute;
         bottom: 5%;
         left: 43%;
@@ -530,7 +530,7 @@ body{
             width: 100%;
             margin-bottom: 3%;
             padding-bottom: 3%;
-            height: 10%;
+            height: 5vh;
             font-size: 90%;
             overflow: hidden;
 
@@ -917,4 +917,76 @@ button.react-calendar__tile.react-calendar__month-view__days__day{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+//--------------------------------------------------------------
+//                        TimeModal.JSX
+//--------------------------------------------------------------
+
+.backgroundManagement{
+    .bgModal{
+        position: absolute;
+        top: 0%;
+        left: 0%;
+        height: 100vh;
+        width: 100vw;
+        z-index: 9998;
+        background-color: rgba(0, 0, 0, 0.5);
+
+        .modal{
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin: -250px 0 0 -250px;
+            z-index: 9999;
+            width: 500px;
+            height: 250px;
+            border: 1px solid;
+            background-color: white;
+            border-radius: 5px;
+
+            .titleDays {
+                font-size: 2rem;
+                display: flex;
+                justify-content: center;
+                margin: 16px 32px;
+                letter-spacing: .1rem;
+                font-weight: bold;
+                border-bottom: 1px solid;
+            }
+            .titleTimes {
+                font-size: 1.3rem;
+                margin: 0 0 0 40px;
+            }
+            form {
+                border: .1rem solid;
+                padding: .5rem;
+                margin: 4px 40px;
+                display: flex;
+                border-radius: 5px;
+
+                .timeInput {
+                    margin-right: 16px;
+                    width: 150px;
+                    font-size: 1.2rem;
+                    text-align: center;
+                    font-weight: bold;
+                    border-radius: 5px;
+                }
+                .submitButton {
+                    width: 50px;
+                    border-radius: 13px;
+                    background-color: #07b;
+                    color: #fff;
+                }
+            }
+            .closeButton {
+                float: right;
+                width: 4.5rem;
+                border-radius: 11px;
+                color: #333;
+                margin: 8px 40px 16px;
+            }
+        }
+    }
 }
