@@ -314,7 +314,7 @@ body {
 }
 .wrap-login .logo {
   height: 20vh;
-  z-index: 1;
+  z-index: 5;
   position: absolute;
   bottom: 5%;
   left: 43%;
@@ -456,13 +456,6 @@ body {
   top: 11%;
   right: 10%;
 }
-.wrap-login .loginContainer .content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 15vh;
-  padding-left: 22%;
-}
 .wrap-login .loginContainer ul {
   list-style: none;
   height: 100%;
@@ -475,7 +468,7 @@ body {
   width: 100%;
   margin-bottom: 3%;
   padding-bottom: 3%;
-  height: 10%;
+  height: 5vh;
   font-size: 90%;
   overflow: hidden;
 }
@@ -838,4 +831,67 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.backgroundManagement .bgModal {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  height: 100vh;
+  width: 100vw;
+  z-index: 9998;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.backgroundManagement .bgModal .modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -250px 0 0 -250px;
+  z-index: 9999;
+  width: 500px;
+  height: 250px;
+  border: 1px solid;
+  background-color: white;
+  border-radius: 5px;
+}
+.backgroundManagement .bgModal .modal .titleDays {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  margin: 16px 32px;
+  letter-spacing: 0.1rem;
+  font-weight: bold;
+  border-bottom: 1px solid;
+}
+.backgroundManagement .bgModal .modal .titleTimes {
+  font-size: 1.3rem;
+  margin: 0 0 0 40px;
+}
+.backgroundManagement .bgModal .modal form {
+  border: 0.1rem solid;
+  padding: 0.5rem;
+  margin: 4px 40px;
+  display: flex;
+  border-radius: 5px;
+}
+.backgroundManagement .bgModal .modal form .timeInput {
+  margin-right: 16px;
+  width: 150px;
+  font-size: 1.2rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+}
+.backgroundManagement .bgModal .modal form .submitButton {
+  width: 50px;
+  border-radius: 13px;
+  background-color: #07b;
+  color: #fff;
+}
+.backgroundManagement .bgModal .modal .closeButton {
+  float: right;
+  width: 4.5rem;
+  border-radius: 11px;
+  color: #333;
+  margin: 8px 40px 16px;
 }
