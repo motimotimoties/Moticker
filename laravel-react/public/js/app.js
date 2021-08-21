@@ -3114,17 +3114,24 @@ function Signup() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_2__.default, {
     children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "signupWrap",
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
-        onSubmit: handleSubmit,
-        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
-          children: "name"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-          type: "name",
-          onChange: handleChange,
-          name: "name"
-        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
-          type: "submit"
-        })]
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+        className: "signupContents",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+          onSubmit: handleSubmit,
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("label", {
+            children: "\u30C1\u30FC\u30E0\u540D\u3092\u6559\u3048\u3066\u304F\u3060\u3055\u3044\u3002"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+            children: ["\u3042\u306A\u305F\u306E Moticker \u30EF\u30FC\u30AF\u30B9\u30DA\u30FC\u30B9\u306E\u540D\u524D\u306B\u306A\u308A\u307E\u3059\u3002", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "\u30C1\u30FC\u30E0\u306B\u3068\u3063\u3066\u308F\u304B\u308A\u3084\u3059\u3044\u3082\u306E\u3092\u9078\u3093\u3067\u304F\u3060\u3055\u3044\u3002"]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "name",
+            placeholder: "\u3082\u3061\u3082\u3061\u30AF\u30E9\u30D6",
+            onChange: handleChange,
+            name: "name"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "submit",
+            value: "\u6B21\u3078"
+          })]
+        })
       })
     })
   });
@@ -3228,6 +3235,7 @@ function WorkspaceCreate(props) {
           children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
             type: "email",
             name: "email",
+            placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9",
             onChange: handleChange,
             autoFocus: true
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("input", {
