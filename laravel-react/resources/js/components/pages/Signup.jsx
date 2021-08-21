@@ -33,9 +33,9 @@ export default function Signup() {
             <div className="signupWrap">
                 <div className="signupContents">
                     <form onSubmit={handleSubmit}>
-                        <label>チーム名を教えてください。</label>
-                        <p>あなたの Moticker ワークスペースの名前になります。<br/>チームにとってわかりやすいものを選んでください。</p>
-                        <input type="name" placeholder="もちもちクラブ" onChange={handleChange} name="name"></input>
+                        <label>お名前を教えてください。</label>
+                        <p>あなたの Moticker 上の名前になります。<br/>みんなにとってわかりやすい命名をしてください。</p>
+                        <input type="name" placeholder="もち太郎" onChange={handleChange} name="name"></input>
                         <input type="submit" value="次へ"></input>
                     </form>
                 </div>
