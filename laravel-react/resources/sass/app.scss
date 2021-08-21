@@ -1142,3 +1142,49 @@ button.react-calendar__tile.react-calendar__month-view__days__day{
         }
     }
 }
+//--------------------------------------------------------------
+//                        WorkspaceSetting.JSX
+//--------------------------------------------------------------
+.workspaceSettingWrap {
+    position: relative;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .workspaceSettingContents{
+        width: 50vw;
+        height: 50vh;
+        background-color: #fff;
+        border-radius: 3rem;
+
+        form {
+            padding: 2rem;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-content: center;
+
+            label {
+                font-size: 32px;
+                font-weight: bold;
+                text-align: center;
+            }
+            input[type="text"] {
+                font-size: 1.2rem;
+                padding-left: 1rem;
+                border-radius: .3rem;
+                width: 29.2vw;
+                font-weight: bold;
+                height: 2rem;
+                margin-bottom: 1rem;
+            }
+            input[type="submit"] {
+                width: 10vw;
+                border-radius: .3rem;
+            }
+        }
+    }
+}
