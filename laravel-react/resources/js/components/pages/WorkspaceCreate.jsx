@@ -3,6 +3,7 @@ import { Link, useHistory, useParams } from 'react-router-dom';
 import axios from 'axios';
 import InputEmail from '../atom/InputEmail';
 import BackgroundDesign from '../atom/BackgroundDesign';
+import GoogleIcon from '../../../images/google-logo.png';
 
 export default function WorkspaceCreate(props) {
 
@@ -32,11 +33,26 @@ export default function WorkspaceCreate(props) {
     return (
         <BackgroundDesign>
             <div className="workspaceCreateContainer">
-                <form onSubmit={handleSubmit}>
-                    <input type="email" name="email" onChange={handleChange} autoFocus />
-                    <input type="submit" value="登録" />
-                </form>
-                <Link to="/auth" />
+                <div className="workspaceWrap">
+                    <p className="mTi">
+                        まずは、メールアドレス<br/>を入力してください<br/>
+                        <span>
+                            仕事用のメールアドレスがおススメです。
+                        </span>
+                    </p>
+                    <Link className="googleLogin" to="#">
+                        <span><img className="GoogleIcon" src={GoogleIcon} alt="GoogleIcon"/></span>
+                        googleで続行する
+                    </Link>
+                    <div className="mOr">
+                        <hr /><p>あるいは</p><hr />
+                    </div>
+                    <form onSubmit={handleSubmit}>
+                        <input type="email" name="email" onChange={handleChange} autoFocus />
+                        <input type="submit" value="認証メールを送信" />
+                    </form>
+                    <Link to="/auth" />
+                </div>
             </div>
         </BackgroundDesign>
     )

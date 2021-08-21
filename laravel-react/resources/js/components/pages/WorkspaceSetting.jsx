@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
+import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function WorkspaceSetting() {
     const history = useHistory();
@@ -27,17 +28,19 @@ export default function WorkspaceSetting() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                {console.log(name)}
-                <label>ワークスペース</label>
-                <input
-                    type="text"
-                    name="workspacename"
-                    onChange={handleChange}
-                ></input>
-                <input type="submit"></input>
-            </form>
-        </div>
+        <backgroundDesign>
+            <div>
+                <form onSubmit={handleSubmit}>
+                    {console.log(name)}
+                    <label>ワークスペース</label>
+                    <input
+                        type="text"
+                        name="workspacename"
+                        onChange={handleChange}
+                    ></input>
+                    <input type="submit"></input>
+                </form>
+            </div>
+        </backgroundDesign>
     );
 }

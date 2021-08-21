@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import BackgroundDesign from '../atom/BackgroundDesign';
 
 export default function Signup() {
     const urlParam = window.location.search.substring(1);
@@ -28,12 +29,14 @@ export default function Signup() {
     };
 
     return (
-        <div>
-            <form onSubmit={handleSubmit}>
-                <label>name</label>
-                <input type="name" onChange={handleChange} name="name"></input>
-                <input type="submit"></input>
-            </form>
-        </div>
+        <BackgroundDesign>
+            <div className="signupWrap">
+                <form onSubmit={handleSubmit}>
+                    <label>name</label>
+                    <input type="name" onChange={handleChange} name="name"></input>
+                    <input type="submit"></input>
+                </form>
+            </div>
+        </BackgroundDesign>
     );
 }
