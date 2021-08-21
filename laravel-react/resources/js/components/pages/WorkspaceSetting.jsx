@@ -28,19 +28,18 @@ export default function WorkspaceSetting() {
     };
 
     return (
-        <backgroundDesign>
-            <div>
-                <form onSubmit={handleSubmit}>
-                    {console.log(name)}
-                    <label>ワークスペース</label>
-                    <input
-                        type="text"
-                        name="workspacename"
-                        onChange={handleChange}
-                    ></input>
-                    <input type="submit"></input>
-                </form>
+        <BackgroundDesign>
+            <div className="workspaceSettingWrap">
+                <div className="workspaceSettingContents">
+                    <form onSubmit={handleSubmit}>
+                        {console.log(name)}
+                        <label>チーム名を教えてください。</label>
+                        <p>あなたの Moticker ワークスペースの名前になります。<br/>チームにとってわかりやすいものを選んでください。</p>
+                        <input type="text" placeholder="もちもちクラブ" name="workspacename" onChange={handleChange}></input>
+                        <input type="submit" value="次へ"></input>
+                    </form>
+                </div>
             </div>
-        </backgroundDesign>
+        </BackgroundDesign>
     );
 }
