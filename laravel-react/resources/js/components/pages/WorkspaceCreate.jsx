@@ -48,7 +48,7 @@ export default function WorkspaceCreate(props) {
                         <hr /><p>あるいは</p><hr />
                     </div>
                     <form onSubmit={handleSubmit}>
-                        <input type="email" name="email" onChange={handleChange} autoFocus />
+                        <input type="email" name="email" placeholder="メールアドレス" onChange={handleChange} autoFocus />
                         <input type="submit" value="認証メールを送信" />
                     </form>
                     <Link to="/auth" />

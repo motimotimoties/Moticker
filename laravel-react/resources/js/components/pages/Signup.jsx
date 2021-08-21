@@ -31,11 +31,14 @@ export default function Signup() {
     return (
         <BackgroundDesign>
             <div className="signupWrap">
-                <form onSubmit={handleSubmit}>
-                    <label>name</label>
-                    <input type="name" onChange={handleChange} name="name"></input>
-                    <input type="submit"></input>
-                </form>
+                <div className="signupContents">
+                    <form onSubmit={handleSubmit}>
+                        <label>チーム名を教えてください。</label>
+                        <p>あなたの Moticker ワークスペースの名前になります。<br/>チームにとってわかりやすいものを選んでください。</p>
+                        <input type="name" placeholder="もちもちクラブ" onChange={handleChange} name="name"></input>
+                        <input type="submit" value="次へ"></input>
+                    </form>
+                </div>
             </div>
         </BackgroundDesign>
     );

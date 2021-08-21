@@ -989,3 +989,47 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
   color: #333;
   margin: 8px 40px 16px;
 }
+
+.signupWrap {
+  position: relative;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.signupWrap .signupContents {
+  width: 50vw;
+  height: 50vh;
+  background-color: #fff;
+  border-radius: 3rem;
+}
+.signupWrap .signupContents form {
+  padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+.signupWrap .signupContents form label {
+  font-size: 32px;
+  font-weight: bold;
+  text-align: center;
+}
+.signupWrap .signupContents form input[type=name] {
+  font-size: 1.2rem;
+  padding-left: 1rem;
+  border-radius: 0.3rem;
+  width: 29.2vw;
+  font-weight: bold;
+  height: 2rem;
+  margin-bottom: 1rem;
+}
+.signupWrap .signupContents form input[type=":placeholder-shown"] {
+  color: #ccc;
+}
+.signupWrap .signupContents form input[type=submit] {
+  width: 10vw;
+  border-radius: 0.3rem;
+}
