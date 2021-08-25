@@ -7,6 +7,8 @@ use App\Models\User_auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Mail;
+use App\Mail\RegisterMail;
 
 use function PHPUnit\Framework\isEmpty;
 
@@ -43,6 +45,9 @@ class UserRegist extends Controller
 
         $res = User_auth::select('token')->where('id', $id)->first();
         $token = $res->token;
+
+        $user = User_auth::where('email', $email)->first();
+        Mail::to($user)->send(new RegisterMail($user));
 
         return response()->json($id);
     }

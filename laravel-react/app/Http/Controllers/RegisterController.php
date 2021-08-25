@@ -14,17 +14,25 @@ class RegisterController extends Controller
     public function register(Request $request) {
         // $token = 'aAaA01';
         // $token = $request['token'];
-        $id = $request['id'];
-        $data = [];
+        $email = $request['email'];
 
-        $mail = User_auth::select('mail')->where('id', $id)->first();
-        $token = User_auth::select('token')->where('id', $id)->first();
 
-        // Mail::send(new RegisterMail($token));
-        // return view('registers.index');
-        Mail::send('register_mail', $data, function($message){
-            $message->to('keitaford@icloud.com', 'K.R.')
-            ->subject('[Moticker]メール認証コード');
-        });
+
+        // $mail = User_auth::select('email')->where('id', $id)->first();
+        // $token = User_auth::select('token')->where('id', $id)->first();
+        
+        // $data = [];
+
+
+
+        // Mail::send('register_mail', $data, function($message){
+        //     $message
+        //         ->to($mail)
+        //         ->subject('[Moticker]メール認証コード');
+        // });
+
+        $user = User_auth::find_by('email', $email);
+
+        Mail::to($user)->send(new RegisterMail($user));
     }
 }

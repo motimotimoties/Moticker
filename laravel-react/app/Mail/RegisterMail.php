@@ -16,10 +16,10 @@ class RegisterMail extends Mailable
      *
      * @return void
      */
-    public function __construct($token)
+    public function __construct($user)
     {
         //
-        $this->token = $token;
+        $this->user = $user;
     }
 
     /**
@@ -31,9 +31,9 @@ class RegisterMail extends Mailable
     {
         return $this
 //            ->to('{{email}}')
-           ->to('keitaford@icloud.com')
+            ->view('register_mail')
+            ->to('keitaford@icloud.com')
             ->subject('[Moticker]メール認証コード')
-            ->view('register_mail');
-            // ->with(['token' => $this->token]);
+            ->with(['user' => $this->user]);
     }
 }
