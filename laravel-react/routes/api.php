@@ -3,6 +3,8 @@
 use App\Http\Controllers\UserRegist;
 use App\Http\Controllers\MakeworkspaceController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ShiftregistController;
+use App\Http\Controllers\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -33,11 +35,14 @@ Route::post('/makeworkspace/update', [MakeworkspaceController::class, 'update'])
 Route::post('/makeworkspace/delete', [MakeworkspaceController::class, 'delete']);
 
 Route::post('/shiftregist', [ShiftregistController::class, 'store']);
-Route::post('/shiftregist/update', [ShiftregistController::class, 'update']);
-Route::post('/shiftregist/delete', [ShiftregistController::class, 'dalete']);
+// Route::post('/shiftregist/update', [ShiftregistController::class, 'update']);
+// Route::post('/shiftregist/delete', [ShiftregistController::class, 'dalete']);
 
 Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
-Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
-Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
+// Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
+// Route::post('/mastershiftregist', [MasterShiftregistController::class, 'store']);
 
 Route::get('/registermail/register', [RegisterController::class, 'register']);
+
+Route::post('/emailChk', [Users::class, 'index']);
+Route::post('/workspaceChk', [Users::class, 'show']);

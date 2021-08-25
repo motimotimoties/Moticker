@@ -27,13 +27,12 @@ class MakeworkspaceController extends Controller
 		$user->workspace_id = $id;
 		$user->save();
 
-		$user_token = User::select('remember_token')->where('id', $user_id)->first();
+		// $user_token = User::select('remember_token')->where('id', $user_id)->first();
 
-		Cookie::queue('key', $user_token, 999999);
+		// $response = response();
+		// $response->cookie('user_id', $user_id, 5000);
 
-		$hashId = Hash::make($id);
-
-    	return response()->json($hashId);
+    	return response()->json($user_id);
     }
 
     public function update(Request $request)
