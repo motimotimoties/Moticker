@@ -45,20 +45,20 @@ export default function Shiftcalendar() {
     };
 
     const [monthItem, setMonthItem] = useState([
-        {
-            date: "2021-08-20",
-            name: "ローソン",
-            enter_time: "9:30",
-            exit_time: "14:30",
-            status: "false",
-        },
-        {
-            date: "2021-08-21",
-            name: "天白区",
-            enter_time: "9:30",
-            exit_time: "14:30",
-            status: "true",
-        },
+        // {
+        //     date: "2021-08-20",
+        //     name: "ローソン",
+        //     enter_time: "9:30",
+        //     exit_time: "14:30",
+        //     status: "false",
+        // },
+        // {
+        //     date: "2021-08-21",
+        //     name: "天白区",
+        //     enter_time: "9:30",
+        //     exit_time: "14:30",
+        //     status: "true",
+        // },
     ]);
 
     const shiftGet = async (users_id) => {
@@ -70,9 +70,14 @@ export default function Shiftcalendar() {
                 })
                 .then(function (res) {
                     res.data.forEach((element) => {
-                        setNewMonthItem([...monthItem, element]);
-                        setMonthItem(newMonthItem);
-                        console.log(element);
+                        setMonthItem(monthItem => [...monthItem,{
+                            date: element.date,
+                            name: element.name,
+                            enter_time: element.enter_time.substring(0, 5),
+                            exit_time: element.exit_time.substring(0, 5),
+                            status: "true",
+                        }]);
+                        console.log(monthItem);
                     })
                 });
         } catch (err) {
@@ -113,6 +118,8 @@ export default function Shiftcalendar() {
             </div>
         );
     };
+    useEffect(() => {
+    }, [monthItem])
 
     const onClickDay = (e) => {
         setValue(e);
@@ -156,6 +163,7 @@ export default function Shiftcalendar() {
                 name={workspaces}
                 value={value}
                 showModal={showModal}
+                shiftGet={shiftGet}
                 handleClickClose={handleClickClose}
             />
         </BackgroundCalendar>
