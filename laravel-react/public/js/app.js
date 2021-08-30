@@ -2749,7 +2749,7 @@ function TimeModal(props) {
   var date = props.value;
   var year = date.getFullYear();
   var month = date.getMonth() + 1;
-  var day = ("0" + date.getDate()).slice(-2);
+  var day = date.getDate();
 
   var handleSubmit = /*#__PURE__*/function () {
     var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(e) {
@@ -2757,13 +2757,14 @@ function TimeModal(props) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              console.log(userId);
+              console.log(day);
               e.preventDefault();
 
               try {
+                console.log(formatDate);
                 axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/shiftregist", {
                   user_id: userId,
-                  date: formatDate,
+                  date: year + "-" + month + "-" + day,
                   enter_time: enterTime,
                   exit_time: exitTime
                 }).then(function (res) {
@@ -2789,8 +2790,8 @@ function TimeModal(props) {
   }();
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
+    console.log(props.value);
     setWorkspaces(props.name);
-    setFormatDate(year + "-" + month + "+" + day);
   }, [props.name]);
   var option = workspaces.map(function (data) {
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
@@ -3347,19 +3348,21 @@ function Shiftcalendar() {
     };
   }();
 
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([{
-    date: "2021-08-20",
-    name: "ローソン",
-    enter_time: "9:30",
-    exit_time: "14:30",
-    status: "false"
-  }, {
-    date: "2021-08-21",
-    name: "天白区",
-    enter_time: "9:30",
-    exit_time: "14:30",
-    status: "true"
-  }]),
+  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([// {
+    //     date: "2021-08-20",
+    //     name: "ローソン",
+    //     enter_time: "9:30",
+    //     exit_time: "14:30",
+    //     status: "false",
+    // },
+    // {
+    //     date: "2021-08-21",
+    //     name: "天白区",
+    //     enter_time: "9:30",
+    //     exit_time: "14:30",
+    //     status: "true",
+    // },
+  ]),
       _useState16 = _slicedToArray(_useState15, 2),
       monthItem = _useState16[0],
       setMonthItem = _useState16[1];
@@ -3376,9 +3379,16 @@ function Shiftcalendar() {
                   users_id: users_id
                 }).then(function (res) {
                   res.data.forEach(function (element) {
-                    setNewMonthItem([].concat(_toConsumableArray(monthItem), [element]));
-                    setMonthItem(newMonthItem);
-                    console.log(element);
+                    setMonthItem(function (monthItem) {
+                      return [].concat(_toConsumableArray(monthItem), [{
+                        date: element.date,
+                        name: element.name,
+                        enter_time: element.enter_time.substring(0, 5),
+                        exit_time: element.exit_time.substring(0, 5),
+                        status: "true"
+                      }]);
+                    });
+                    console.log(monthItem);
                   });
                 });
               } catch (err) {
@@ -3425,6 +3435,8 @@ function Shiftcalendar() {
     });
   };
 
+  (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {}, [monthItem]);
+
   var onClickDay = function onClickDay(e) {
     setValue(e);
     setShowModal(true);
@@ -3466,6 +3478,7 @@ function Shiftcalendar() {
       name: workspaces,
       value: value,
       showModal: showModal,
+      shiftGet: shiftGet,
       handleClickClose: handleClickClose
     })]
   });

@@ -23,16 +23,16 @@ export default function TimeModal(props) {
     const date = props.value;
     const year = date.getFullYear();
     const month = date.getMonth() + 1;
-    const day = ("0" + date.getDate()).slice(-2);
+    const day = date.getDate();
 
     const handleSubmit = async (e) => {
-        console.log(userId);
+        console.log(day);
         e.preventDefault();
         try {
             axios
                 .post("/api/shiftregist", {
                     user_id: userId,
-                    date: formatDate,
+                    date: year + "-" + month + "-" + day,
                     enter_time: enterTime,
                     exit_time: exitTime,
                 })
@@ -46,8 +46,8 @@ export default function TimeModal(props) {
     };
 
     useEffect(() => {
+        console.log(props.value);
         setWorkspaces(props.name);
-        setFormatDate(year + "-" + month + "+" + day);
     }, [props.name]);
 
     const option = workspaces.map((data) => (
