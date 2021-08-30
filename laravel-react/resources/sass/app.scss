@@ -1025,6 +1025,23 @@ button.react-calendar__tile.react-calendar__month-view__days__day{
     align-items: center;
 }
 
+
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div div {
+    height: 100%;
+}
+.react-calendar .react-calendar__viewContainer .react-calendar__month-view div {
+    height: 100%;
+}
+.shift-subject {
+    font-size: .7rem;
+    display: flex;
+    max-height: 30px;
+    line-height: .9rem;
+    border: 1px solid;
+    justify-content: center;
+    background-color: #ffd;
+}
+
 //--------------------------------------------------------------
 //                        TimeModal.JSX
 //--------------------------------------------------------------
