@@ -4,6 +4,7 @@ use App\Http\Controllers\UserRegist;
 use App\Http\Controllers\MakeworkspaceController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ShiftregistController;
+use App\Http\Controllers\UndecidedShift;
 use App\Http\Controllers\Users;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
@@ -46,3 +47,5 @@ Route::get('/registermail/register', [RegisterController::class, 'register']);
 
 Route::post('/emailChk', [Users::class, 'index']);
 Route::post('/workspaceChk', [Users::class, 'show']);
+
+Route::post('/undecidedshift', [UndecidedShift::class, 'index']);
