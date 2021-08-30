@@ -939,10 +939,61 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
   font-size: 0.7rem;
   display: flex;
   max-height: 30px;
-  line-height: 0.9rem;
-  border: 1px solid;
+  line-height: 0.8rem;
+  border: 2px solid #FEE400;
+  justify-content: center;
+  background-color: #ffb;
+  align-items: center;
+  border-radius: 15px;
+  text-align: center;
+  flex-direction: column;
+  box-shadow: 2px 2px 3px #ccc;
+  margin-bottom: 3px;
+  transition: 0.1s;
+}
+.shift-subject:last-child {
+  margin-bottom: 0;
+}
+.shift-subject:hover {
+  box-shadow: 1px 1px 3px #ccc;
+}
+.shift-subject:active {
+  box-shadow: none;
+}
+.shift-subject span {
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
+}
+
+.undefine-shift-subject {
+  font-size: 0.7rem;
+  display: flex;
+  max-height: 30px;
+  line-height: 0.8rem;
+  border: 2px solid #FEE400;
   justify-content: center;
   background-color: #ffd;
+  align-items: center;
+  border-radius: 15px;
+  text-align: center;
+  color: #aaa;
+  flex-direction: column;
+  box-shadow: 2px 2px 3px #ccc;
+  margin-bottom: 3px;
+  transition: 0.1s;
+}
+.undefine-shift-subject:last-child {
+  margin-bottom: 0;
+}
+.undefine-shift-subject:hover {
+  box-shadow: 1px 1px 3px #ccc;
+}
+.undefine-shift-subject:active {
+  box-shadow: none;
+}
+.undefine-shift-subject span {
+  letter-spacing: 0.1rem;
+  font-size: 0.6rem;
 }
 
 .backgroundManagement .bgModal {

@@ -109,8 +109,8 @@ export default function Shiftcalendar() {
                               ...acc,
                               <div className={curr.status == 'true' ? "shift-subject" : "undefine-shift-subject"}>
                                   {curr.name}
-                                  <br />
-                                  {curr.enter_time + "~" + curr.exit_time}
+                                  <br/>
+                                  <span>{curr.enter_time + "~" + curr.exit_time}</span>
                               </div>,
                           ]
                         : acc;
