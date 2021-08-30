@@ -17,10 +17,10 @@ export default function Shiftcalendar() {
     const temp = urlParam.split("=");
     const [userId, setUserId] = useState(temp[1]);
 
-    const [email, setEmail] = useState('');
+    const [email, setEmail] = useState("");
 
     const [workspaces, setWorkspaces] = useState([]);
-
+    const [newMonthItem, setNewMonthItem] = useState([]);
 
     const workspaceNameGet = async (email) => {
         axios
@@ -29,9 +29,9 @@ export default function Shiftcalendar() {
             })
             .then(function (res) {
                 console.log(res.data);
-                setWorkspaces(res.data)
+                setWorkspaces(res.data);
             });
-    }
+    };
 
     const emailGet = async () => {
         axios
@@ -46,34 +46,32 @@ export default function Shiftcalendar() {
 
     const [monthItem, setMonthItem] = useState([
         {
-            date: "2021-07-15",
-            text: "ローソン",
-            time: "9:30~10:00",
-            status: "true",
-        },
-        {
-            date: "2021-07-17",
-            text: "ローソン",
-            time: "16:00~21:15",
-            status: "false",
-        },
-        {
             date: "2021-07-21",
-            text: "ローソン",
-            time: "9:30~14:30",
+            name: "ローソン",
+            enter_time: "9:30",
+            exit_time: "14:30",
             status: "false",
         },
     ]);
 
-    // const shiftGet = async () => {
-    //     try {
-    //         axios.post('', {
-
-    //         })
-    //     } catch (err) {
-    //         console.log(err);
-    //     }
-    // }
+    const shiftGet = async (users_id) => {
+        try {
+            axios
+                .post("/api/undecidedshift", {
+                    // email: email,
+                    users_id: users_id,
+                })
+                .then(function (res) {
+                    res.data.forEach((element) => {
+                        setNewMonthItem([...monthItem, element]);
+                        setMonthItem(newMonthItem);
+                        console.log(element);
+                    })
+                });
+        } catch (err) {
+            console.log(err);
+        }
+    };
 
     const getFormData = (calendar) => {
         let year = calendar.getFullYear();
@@ -98,9 +96,9 @@ export default function Shiftcalendar() {
                         ? [
                               ...acc,
                               <div className="shift-subject">
-                                  {curr.text}
+                                  {curr.name}
                                   <br />
-                                  {curr.time}
+                                  {curr.enter_time + "~" + curr.exit_time}
                               </div>,
                           ]
                         : acc;
@@ -120,7 +118,15 @@ export default function Shiftcalendar() {
 
     useEffect(() => {
         emailGet();
-    }, [])
+        shiftGet();
+    }, []);
+
+    useEffect(() => {
+        workspaces.forEach((element) => {
+            console.log(element);
+            shiftGet(element.users_id);
+        });
+    }, [workspaces]);
 
     const list = workspaces.map((data) => (
         <li key={data.workspaces_id}>{data.name}</li>
@@ -128,9 +134,7 @@ export default function Shiftcalendar() {
 
     return (
         <BackgroundCalendar>
-            <ul>
-                {list}
-            </ul>
+            <ul>{list}</ul>
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"
