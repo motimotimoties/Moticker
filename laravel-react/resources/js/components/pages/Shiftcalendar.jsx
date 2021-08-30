@@ -46,11 +46,18 @@ export default function Shiftcalendar() {
 
     const [monthItem, setMonthItem] = useState([
         {
-            date: "2021-07-21",
+            date: "2021-08-20",
             name: "ローソン",
             enter_time: "9:30",
             exit_time: "14:30",
             status: "false",
+        },
+        {
+            date: "2021-08-21",
+            name: "天白区",
+            enter_time: "9:30",
+            exit_time: "14:30",
+            status: "true",
         },
     ]);
 
@@ -95,7 +102,7 @@ export default function Shiftcalendar() {
                         date.getDate() === getFormData(calendar)[2]
                         ? [
                               ...acc,
-                              <div className="shift-subject">
+                              <div className={curr.status == 'true' ? "shift-subject" : "undefine-shift-subject"}>
                                   {curr.name}
                                   <br />
                                   {curr.enter_time + "~" + curr.exit_time}
