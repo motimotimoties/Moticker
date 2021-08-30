@@ -148,7 +148,7 @@ export default function Shiftcalendar() {
 
     return (
         <BackgroundCalendar>
-            <ul>{list}</ul>
+            <ul style={{position: "absolute", top: 30, zIndex: 3}}>{list}</ul>
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"
@@ -164,6 +164,7 @@ export default function Shiftcalendar() {
                 value={value}
                 showModal={showModal}
                 shiftGet={shiftGet}
+                setMonthItem={setMonthItem}
                 handleClickClose={handleClickClose}
             />
         </BackgroundCalendar>
