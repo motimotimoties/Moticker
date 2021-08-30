@@ -5,6 +5,7 @@ export default function InviteInput() {
         <div>
             <form>
                 <input type="email" name="email" />
+                <input type="submit"></input>
             </form>
         </div>
     )
