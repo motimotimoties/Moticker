@@ -10,8 +10,8 @@ import WorkspaceSetting from './components/pages/WorkspaceSetting';
 import Shiftcalendar from './components/pages/Shiftcalendar';
 import LoginAuth from './components/pages/LoginAuth';
 import LoginInput from './components/pages/LoginInput';
-import inviteAuth from './components/pages/inviteAuth';
-import inviteInput from './components/pages/inviteInput';
+import InviteAuth from './components/pages/inviteAuth';
+import InviteInput from './components/pages/inviteInput';
 
 function App() {
     return (
@@ -24,10 +24,10 @@ function App() {
                 <Route path='/shiftcalendar' component={Shiftcalendar} />
                 <Route path='/signup' component={Signup} />
                 <Route path='/workspacesetting' component={WorkspaceSetting} />
-                <Route path='/workspacesetting' component={LoginAuth} />
-                <Route path='/workspacesetting' component={LoginInput} />
-                <Route path='/workspacesetting' component={inviteAuth} />
-                <Route path='/workspacesetting' component={inviteInput} />
+                <Route path='/loginauth' component={LoginAuth} />
+                <Route path='/logininput' component={LoginInput} />
+                <Route path='/inviteauth' component={InviteAuth} />
+                <Route path='/inviteinput' component={InviteInput} />
             </Switch>
         </BrowserRouter>
     )
