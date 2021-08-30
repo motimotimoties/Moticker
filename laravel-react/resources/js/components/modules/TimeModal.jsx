@@ -26,7 +26,7 @@ export default function TimeModal(props) {
     const day = ("0" + date.getDate()).slice(-2);
 
     const handleSubmit = async (e) => {
-        setFormatDate(year + "-" + month + "+" + day);
+        console.log(userId);
         e.preventDefault();
         try {
             axios
@@ -47,12 +47,12 @@ export default function TimeModal(props) {
 
     useEffect(() => {
         setWorkspaces(props.name);
-    }, [props.name])
+        setFormatDate(year + "-" + month + "+" + day);
+    }, [props.name]);
 
     const option = workspaces.map((data) => (
         <option value={data.users_id} key={data.users_id}>
             {data.name}
-            {console.log(data)}
         </option>
     ));
 
@@ -72,6 +72,7 @@ export default function TimeModal(props) {
                                 onChange={handleUserIdChange}
                                 value={userId}
                             >
+                                <option value="">選択してください</option>
                                 {option}
                             </select>
                             <input
