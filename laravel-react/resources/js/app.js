@@ -12,6 +12,7 @@ import LoginAuth from './components/pages/LoginAuth';
 import LoginInput from './components/pages/LoginInput';
 import InviteAuth from './components/pages/inviteAuth';
 import InviteInput from './components/pages/inviteInput';
+import InviteName from './components/pages/InviteName';
 
 function App() {
     return (
@@ -28,6 +29,7 @@ function App() {
                 <Route path='/logininput' component={LoginInput} />
                 <Route path='/inviteauth' component={InviteAuth} />
                 <Route path='/inviteinput' component={InviteInput} />
+                <Route path='/invitename' component={InviteName} />
             </Switch>
         </BrowserRouter>
     )

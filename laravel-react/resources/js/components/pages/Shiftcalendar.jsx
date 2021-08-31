@@ -142,27 +142,37 @@ export default function Shiftcalendar() {
 
     return (
         <BackgroundCalendar>
-            <div
-                style={{
-                    position: "absolute",
-                    top: 30,
-                    left: 10,
-                    width: 200,
-                    minHeight: 100,
-                    zIndex: 1,
-                    backgroundColor: "#ffb",
-                    textAlign: "center",
-                    borderRadius: 5,
-                    border: "2px solid #FEE400",
-                }}
-            >
-                招待
-                <br />
-                <span style={{fontSize: "0.75rem"}}>以下のURLを招待する人へ送信してください。</span>
-                <div style={{ fontSize: "0.75rem", padding: 10 }}>
-                    http://localhost:8080/inviteinput?id={workspaceId}
+            {workspaceId != 0 ?
+                <div
+                    style={{
+                        position: "absolute",
+                        top: 30,
+                        left: 10,
+                        width: 200,
+                        minHeight: 100,
+                        zIndex: 1,
+                        backgroundColor: "#ffb",
+                        textAlign: "center",
+                        borderRadius: 5,
+                        border: "2px solid #FEE400",
+                    }}
+                >
+                    招待
+                    <br />
+                    <span style={{ fontSize: "0.75rem" }}>
+                        以下のURLを招待する人へ送信してください。
+                    </span>
+                    <div
+                        style={{
+                            fontSize: "0.75rem",
+                            padding: 10,
+                            overflowX: "auto",
+                        }}
+                    >
+                        http://localhost:8080/inviteinput?id={+workspaceId}
+                    </div>
                 </div>
-            </div>
+                : null}
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Invite;
 use App\Http\Controllers\UserRegist;
 use App\Http\Controllers\MakeworkspaceController;
 use App\Http\Controllers\RegisterController;
@@ -26,6 +27,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::get('/user', [UserRegist::class, 'index']);
 
+// user_authへ登録
 Route::post('/userCreate', [UserRegist::class, 'store']);
 
 Route::post('/userRegist', [UserRegist::class, 'regist']);
@@ -49,3 +51,6 @@ Route::post('/emailChk', [Users::class, 'index']);
 Route::post('/workspaceChk', [Users::class, 'show']);
 
 Route::post('/undecidedshift', [UndecidedShift::class, 'index']);
+
+Route::post('/inviteauth', [Invite::class, 'auth']);
+Route::post('/invitename', [Invite::class, 'name']);
