@@ -49,6 +49,7 @@ class UserRegist extends Controller
         $user = User_auth::where('email', $email)->first();
         // Mail::to($user)->send(new RegisterMail($user));
 
+        // user_authのIdを出力
         return response()->json($id);
     }
 
