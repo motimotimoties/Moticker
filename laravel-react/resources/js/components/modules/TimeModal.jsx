@@ -2,15 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 
 export default function TimeModal(props) {
-    const [workspaces, setWorkspaces] = useState([]);
-    const [userId, setUserId] = useState("");
-    const [formatDate, setFormatDate] = useState("");
     const [enterTime, setEnterTime] = useState("");
     const [exitTime, setExitTime] = useState("");
-
-    const handleUserIdChange = (e) => {
-        setUserId(e.target.value);
-    };
 
     const handleEnterTimeChanege = (e) => {
         setEnterTime(e.target.value);
@@ -31,7 +24,7 @@ export default function TimeModal(props) {
         try {
             axios
                 .post("/api/shiftregist", {
-                    user_id: userId,
+                    user_id: props.userId,
                     date: year + "-" + month + "-" + day,
                     enter_time: enterTime,
                     exit_time: exitTime,
@@ -47,34 +40,18 @@ export default function TimeModal(props) {
 
     useEffect(() => {
         console.log(props.value);
-        setWorkspaces(props.name);
     }, [props.name]);
-
-    const option = workspaces.map((data) => (
-        <option value={data.users_id} key={data.users_id}>
-            {data.name}
-        </option>
-    ));
 
     return (
         <div>
             {props.showModal ? (
                 <div className="bgModal">
                     <div className="modal">
-                        {/* <p>{console.log(props.value)}</p> */}
-                        {/* <p>{getFormDate(props.value)[0]}/{getFormDate(props.value)[1] + 1}/{getFormDate(props.value)[2]}</p> */}
                         <p className="titleDays">
                             {year}-{month}-{day}
                         </p>
                         <p className="titleTimes">時間</p>
                         <form onSubmit={handleSubmit}>
-                            <select
-                                onChange={handleUserIdChange}
-                                value={userId}
-                            >
-                                <option value="">選択してください</option>
-                                {option}
-                            </select>
                             <input
                                 className="timeInput"
                                 type="time"
