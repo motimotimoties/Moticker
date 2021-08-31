@@ -11,9 +11,9 @@ class Users extends Controller
     //
     public function index(Request $request) {
         $user_id = $request['user_id'];
-        $email = User::select('email')->where('id', $user_id)->first();
-        $workspace_users = DB::table('users')->join('workspaces', 'users.id', '=', 'workspaces.user_id')->select('workspaces.name', 'workspaces.id as workspaces_id', 'users.id as users_id')->where('email', $email)->get();
-        return response()->json($email);
+        // $email = User::select('email')->where('id', $user_id)->first();
+        $workspaceId = User::join('workspaces', 'users.id', '=', 'workspaces.user_id')->select('workspaces.id', 'workspaces.name')->where('user_id', $user_id)->get();
+        return response()->json($workspaceId);
     }
 
     public function show(Request $request) {

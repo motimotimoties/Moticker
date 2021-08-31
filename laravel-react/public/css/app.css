@@ -938,7 +938,7 @@ button.react-calendar__tile.react-calendar__month-view__days__day {
 .shift-subject {
   font-size: 0.7rem;
   display: flex;
-  max-height: 30px;
+  max-height: 40px;
   line-height: 0.8rem;
   border: 2px solid #FEE400;
   justify-content: center;

@@ -9,7 +9,6 @@ export default function Shiftcalendar() {
     const history = useHistory();
     const location = useLocation();
     const [value, setValue] = useState(new Date());
-    const [date, setData] = useState(new Date());
 
     const [showModal, setShowModal] = useState(false);
 
@@ -19,28 +18,18 @@ export default function Shiftcalendar() {
 
     const [email, setEmail] = useState("");
 
-    const [workspaces, setWorkspaces] = useState([]);
-    const [newMonthItem, setNewMonthItem] = useState([]);
+    const [workspaceName, setWorkspaceName] = useState('');
+    const [workspaceId, setWorkspaceId] = useState('');
 
-    const workspaceNameGet = async (email) => {
-        axios
-            .post("/api/workspaceChk", {
-                email: email,
-            })
-            .then(function (res) {
-                console.log(res.data);
-                setWorkspaces(res.data);
-            });
-    };
-
-    const emailGet = async () => {
+    const workspaceIdGet = async () => {
         axios
             .post("/api/emailChk", {
                 user_id: userId,
             })
             .then(function (res) {
-                setEmail(res.data.email);
-                workspaceNameGet(res.data.email);
+                console.log(res.data[0]);
+                setWorkspaceId(res.data[0].id);
+                setWorkspaceName(res.data[0].name);
             });
     };
 
@@ -61,14 +50,15 @@ export default function Shiftcalendar() {
         // },
     ]);
 
-    const shiftGet = async (users_id) => {
+    const shiftGet = async () => {
         try {
             axios
                 .post("/api/undecidedshift", {
-                    // email: email,
-                    users_id: users_id,
+                    workspace_id: workspaceId,
+                    users_id: userId,
                 })
                 .then(function (res) {
+                    console.log(res.data);
                     res.data.forEach((element) => {
                         setMonthItem(monthItem => [...monthItem,{
                             date: element.date,
@@ -76,6 +66,7 @@ export default function Shiftcalendar() {
                             enter_time: element.enter_time.substring(0, 5),
                             exit_time: element.exit_time.substring(0, 5),
                             status: "true",
+                            user: element.user, 
                         }]);
                         console.log(monthItem);
                     })
@@ -111,6 +102,7 @@ export default function Shiftcalendar() {
                                   {curr.name}
                                   <br/>
                                   <span>{curr.enter_time + "~" + curr.exit_time}</span>
+                                  <span>{curr.user ? curr.user: null}</span>
                               </div>,
                           ]
                         : acc;
@@ -131,24 +123,15 @@ export default function Shiftcalendar() {
     };
 
     useEffect(() => {
-        emailGet();
-        shiftGet();
+        workspaceIdGet();
     }, []);
 
     useEffect(() => {
-        workspaces.forEach((element) => {
-            console.log(element);
-            shiftGet(element.users_id);
-        });
-    }, [workspaces]);
-
-    const list = workspaces.map((data) => (
-        <li key={data.workspaces_id}>{data.name}</li>
-    ));
+        shiftGet();
+    }, [workspaceId, userId]);
 
     return (
         <BackgroundCalendar>
-            <ul style={{position: "absolute", top: 30, zIndex: 3}}>{list}</ul>
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"
@@ -160,7 +143,7 @@ export default function Shiftcalendar() {
                 />
             </div>
             <TimeModal
-                name={workspaces}
+                userId={userId}
                 value={value}
                 showModal={showModal}
                 shiftGet={shiftGet}

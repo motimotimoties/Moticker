@@ -47,7 +47,7 @@ class UserRegist extends Controller
         $token = $res->token;
 
         $user = User_auth::where('email', $email)->first();
-        Mail::to($user)->send(new RegisterMail($user));
+        // Mail::to($user)->send(new RegisterMail($user));
 
         return response()->json($id);
     }
