@@ -1,6 +1,108 @@
 /******/ (() => { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
+/*!************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _extends)
+/* harmony export */ });
+function _extends() {
+  _extends = Object.assign || function (target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i];
+
+      for (var key in source) {
+        if (Object.prototype.hasOwnProperty.call(source, key)) {
+          target[key] = source[key];
+        }
+      }
+    }
+
+    return target;
+  };
+
+  return _extends.apply(this, arguments);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
+/*!******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
+/* harmony export */ });
+/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
+
+function _inheritsLoose(subClass, superClass) {
+  subClass.prototype = Object.create(superClass.prototype);
+  subClass.prototype.constructor = subClass;
+  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
+/*!*********************************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
+  \*********************************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
+/* harmony export */ });
+function _objectWithoutPropertiesLoose(source, excluded) {
+  if (source == null) return {};
+  var target = {};
+  var sourceKeys = Object.keys(source);
+  var key, i;
+
+  for (i = 0; i < sourceKeys.length; i++) {
+    key = sourceKeys[i];
+    if (excluded.indexOf(key) >= 0) continue;
+    target[key] = source[key];
+  }
+
+  return target;
+}
+
+/***/ }),
+
+/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
+/*!*******************************************************************!*\
+  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
+/* harmony export */ });
+function _setPrototypeOf(o, p) {
+  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
+    o.__proto__ = p;
+    return o;
+  };
+
+  return _setPrototypeOf(o, p);
+}
+
+/***/ }),
+
 /***/ "./node_modules/@babel/runtime/regenerator/index.js":
 /*!**********************************************************!*\
   !*** ./node_modules/@babel/runtime/regenerator/index.js ***!
@@ -2327,16 +2429,16 @@ function App() {
         path: "/workspacesetting",
         component: _components_pages_WorkspaceSetting__WEBPACK_IMPORTED_MODULE_7__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/loginauth",
         component: _components_pages_LoginAuth__WEBPACK_IMPORTED_MODULE_9__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/logininput",
         component: _components_pages_LoginInput__WEBPACK_IMPORTED_MODULE_10__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/inviteauth",
         component: _components_pages_inviteAuth__WEBPACK_IMPORTED_MODULE_11__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/inviteinput",
         component: _components_pages_inviteInput__WEBPACK_IMPORTED_MODULE_12__.default
       })]
     })
@@ -2607,34 +2709,15 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
 
 
 function TimeModal(props) {
-  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+  var _useState = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
       _useState2 = _slicedToArray(_useState, 2),
-      workspaces = _useState2[0],
-      setWorkspaces = _useState2[1];
+      enterTime = _useState2[0],
+      setEnterTime = _useState2[1];
 
   var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
       _useState4 = _slicedToArray(_useState3, 2),
-      userId = _useState4[0],
-      setUserId = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
-      _useState6 = _slicedToArray(_useState5, 2),
-      formatDate = _useState6[0],
-      setFormatDate = _useState6[1];
-
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
-      _useState8 = _slicedToArray(_useState7, 2),
-      enterTime = _useState8[0],
-      setEnterTime = _useState8[1];
-
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
-      _useState10 = _slicedToArray(_useState9, 2),
-      exitTime = _useState10[0],
-      setExitTime = _useState10[1];
-
-  var handleUserIdChange = function handleUserIdChange(e) {
-    setUserId(e.target.value);
-  };
+      exitTime = _useState4[0],
+      setExitTime = _useState4[1];
 
   var handleEnterTimeChanege = function handleEnterTimeChanege(e) {
     setEnterTime(e.target.value);
@@ -2659,9 +2742,8 @@ function TimeModal(props) {
               e.preventDefault();
 
               try {
-                console.log(formatDate);
                 axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/shiftregist", {
-                  user_id: userId,
+                  user_id: props.userId,
                   date: year + "-" + month + "-" + day,
                   enter_time: enterTime,
                   exit_time: exitTime
@@ -2689,14 +2771,7 @@ function TimeModal(props) {
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
     console.log(props.value);
-    setWorkspaces(props.name);
   }, [props.name]);
-  var option = workspaces.map(function (data) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
-      value: data.users_id,
-      children: data.name
-    }, data.users_id);
-  });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
     children: props.showModal ? /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
       className: "bgModal",
@@ -2710,14 +2785,7 @@ function TimeModal(props) {
           children: "\u6642\u9593"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
           onSubmit: handleSubmit,
-          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("select", {
-            onChange: handleUserIdChange,
-            value: userId,
-            children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("option", {
-              value: "",
-              children: "\u9078\u629E\u3057\u3066\u304F\u3060\u3055\u3044"
-            }), option]
-          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
             className: "timeInput",
             type: "time",
             name: "enter",
@@ -3084,13 +3152,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+
 function LoginInput() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
         type: "email",
         name: "email"
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+        type: "submit"
+      })]
     })
   });
 }
@@ -3161,50 +3232,46 @@ function Shiftcalendar() {
       value = _useState2[0],
       setValue = _useState2[1];
 
-  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(new Date()),
+  var _useState3 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
       _useState4 = _slicedToArray(_useState3, 2),
-      date = _useState4[0],
-      setData = _useState4[1];
-
-  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(false),
-      _useState6 = _slicedToArray(_useState5, 2),
-      showModal = _useState6[0],
-      setShowModal = _useState6[1];
+      showModal = _useState4[0],
+      setShowModal = _useState4[1];
 
   var urlParam = window.location.search.substring(1);
   var temp = urlParam.split("=");
 
-  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(temp[1]),
+  var _useState5 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(temp[1]),
+      _useState6 = _slicedToArray(_useState5, 2),
+      userId = _useState6[0],
+      setUserId = _useState6[1];
+
+  var _useState7 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
       _useState8 = _slicedToArray(_useState7, 2),
-      userId = _useState8[0],
-      setUserId = _useState8[1];
+      email = _useState8[0],
+      setEmail = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
       _useState10 = _slicedToArray(_useState9, 2),
-      email = _useState10[0],
-      setEmail = _useState10[1];
+      workspaceName = _useState10[0],
+      setWorkspaceName = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
       _useState12 = _slicedToArray(_useState11, 2),
-      workspaces = _useState12[0],
-      setWorkspaces = _useState12[1];
+      workspaceId = _useState12[0],
+      setWorkspaceId = _useState12[1];
 
-  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([]),
-      _useState14 = _slicedToArray(_useState13, 2),
-      newMonthItem = _useState14[0],
-      setNewMonthItem = _useState14[1];
-
-  var workspaceNameGet = /*#__PURE__*/function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee(email) {
+  var workspaceIdGet = /*#__PURE__*/function () {
+    var _ref = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee() {
       return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee$(_context) {
         while (1) {
           switch (_context.prev = _context.next) {
             case 0:
-              axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/workspaceChk", {
-                email: email
+              axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/emailChk", {
+                user_id: userId
               }).then(function (res) {
-                console.log(res.data);
-                setWorkspaces(res.data);
+                console.log(res.data[0]);
+                setWorkspaceId(res.data[0].id);
+                setWorkspaceName(res.data[0].name);
               });
 
             case 1:
@@ -3215,38 +3282,12 @@ function Shiftcalendar() {
       }, _callee);
     }));
 
-    return function workspaceNameGet(_x) {
+    return function workspaceIdGet() {
       return _ref.apply(this, arguments);
     };
   }();
 
-  var emailGet = /*#__PURE__*/function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
-        while (1) {
-          switch (_context2.prev = _context2.next) {
-            case 0:
-              axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/emailChk", {
-                user_id: userId
-              }).then(function (res) {
-                setEmail(res.data.email);
-                workspaceNameGet(res.data.email);
-              });
-
-            case 1:
-            case "end":
-              return _context2.stop();
-          }
-        }
-      }, _callee2);
-    }));
-
-    return function emailGet() {
-      return _ref2.apply(this, arguments);
-    };
-  }();
-
-  var _useState15 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([// {
+  var _useState13 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)([// {
     //     date: "2021-08-20",
     //     name: "ローソン",
     //     enter_time: "9:30",
@@ -3261,21 +3302,22 @@ function Shiftcalendar() {
     //     status: "true",
     // },
   ]),
-      _useState16 = _slicedToArray(_useState15, 2),
-      monthItem = _useState16[0],
-      setMonthItem = _useState16[1];
+      _useState14 = _slicedToArray(_useState13, 2),
+      monthItem = _useState14[0],
+      setMonthItem = _useState14[1];
 
   var shiftGet = /*#__PURE__*/function () {
-    var _ref3 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee3(users_id) {
-      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee3$(_context3) {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/_babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().mark(function _callee2() {
+      return _babel_runtime_regenerator__WEBPACK_IMPORTED_MODULE_0___default().wrap(function _callee2$(_context2) {
         while (1) {
-          switch (_context3.prev = _context3.next) {
+          switch (_context2.prev = _context2.next) {
             case 0:
               try {
                 axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/undecidedshift", {
-                  // email: email,
-                  users_id: users_id
+                  workspace_id: workspaceId,
+                  users_id: userId
                 }).then(function (res) {
+                  console.log(res.data);
                   res.data.forEach(function (element) {
                     setMonthItem(function (monthItem) {
                       return [].concat(_toConsumableArray(monthItem), [{
@@ -3283,7 +3325,8 @@ function Shiftcalendar() {
                         name: element.name,
                         enter_time: element.enter_time.substring(0, 5),
                         exit_time: element.exit_time.substring(0, 5),
-                        status: "true"
+                        status: "true",
+                        user: element.user
                       }]);
                     });
                     console.log(monthItem);
@@ -3295,14 +3338,14 @@ function Shiftcalendar() {
 
             case 1:
             case "end":
-              return _context3.stop();
+              return _context2.stop();
           }
         }
-      }, _callee3);
+      }, _callee2);
     }));
 
-    return function shiftGet(_x2) {
-      return _ref3.apply(this, arguments);
+    return function shiftGet() {
+      return _ref2.apply(this, arguments);
     };
   }();
 
@@ -3317,10 +3360,10 @@ function Shiftcalendar() {
     return [year, month, day];
   };
 
-  var TileContent = function TileContent(_ref4) {
-    var activeStartDate = _ref4.activeStartDate,
-        date = _ref4.date,
-        view = _ref4.view;
+  var TileContent = function TileContent(_ref3) {
+    var activeStartDate = _ref3.activeStartDate,
+        date = _ref3.date,
+        view = _ref3.view;
     return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "contain-shift-subject",
       children: monthItem.reduce(function (acc, curr) {
@@ -3329,6 +3372,8 @@ function Shiftcalendar() {
           className: curr.status == 'true' ? "shift-subject" : "undefine-shift-subject",
           children: [curr.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
             children: curr.enter_time + "~" + curr.exit_time
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+            children: curr.user ? curr.user : null
           })]
         })]) : acc;
       }, [])
@@ -3347,24 +3392,13 @@ function Shiftcalendar() {
   };
 
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    emailGet();
-    shiftGet();
+    workspaceIdGet();
   }, []);
   (0,react__WEBPACK_IMPORTED_MODULE_2__.useEffect)(function () {
-    workspaces.forEach(function (element) {
-      console.log(element);
-      shiftGet(element.users_id);
-    });
-  }, [workspaces]);
-  var list = workspaces.map(function (data) {
-    return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("li", {
-      children: data.name
-    }, data.workspaces_id);
-  });
+    shiftGet();
+  }, [workspaceId, userId]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_3__.default, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ul", {
-      children: list
-    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "calendarContainer",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendar__WEBPACK_IMPORTED_MODULE_7__.default, {
         locale: "ja-JP",
@@ -3375,10 +3409,11 @@ function Shiftcalendar() {
         onClickDay: onClickDay
       })
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(_modules_TimeModal__WEBPACK_IMPORTED_MODULE_4__.default, {
-      name: workspaces,
+      userId: userId,
       value: value,
       showModal: showModal,
       shiftGet: shiftGet,
+      setMonthItem: setMonthItem,
       handleClickClose: handleClickClose
     })]
   });
@@ -3832,13 +3867,16 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+
 function InviteInput() {
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("form", {
+      children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
         type: "email",
         name: "email"
-      })
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+        type: "submit"
+      })]
     })
   });
 }
@@ -43962,108 +44000,6 @@ function valueEqual(a, b) {
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (valueEqual);
 
 
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/extends.js":
-/*!************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/extends.js ***!
-  \************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _extends)
-/* harmony export */ });
-function _extends() {
-  _extends = Object.assign || function (target) {
-    for (var i = 1; i < arguments.length; i++) {
-      var source = arguments[i];
-
-      for (var key in source) {
-        if (Object.prototype.hasOwnProperty.call(source, key)) {
-          target[key] = source[key];
-        }
-      }
-    }
-
-    return target;
-  };
-
-  return _extends.apply(this, arguments);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js":
-/*!******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/inheritsLoose.js ***!
-  \******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _inheritsLoose)
-/* harmony export */ });
-/* harmony import */ var _setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./setPrototypeOf.js */ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js");
-
-function _inheritsLoose(subClass, superClass) {
-  subClass.prototype = Object.create(superClass.prototype);
-  subClass.prototype.constructor = subClass;
-  (0,_setPrototypeOf_js__WEBPACK_IMPORTED_MODULE_0__.default)(subClass, superClass);
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js":
-/*!*********************************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/objectWithoutPropertiesLoose.js ***!
-  \*********************************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _objectWithoutPropertiesLoose)
-/* harmony export */ });
-function _objectWithoutPropertiesLoose(source, excluded) {
-  if (source == null) return {};
-  var target = {};
-  var sourceKeys = Object.keys(source);
-  var key, i;
-
-  for (i = 0; i < sourceKeys.length; i++) {
-    key = sourceKeys[i];
-    if (excluded.indexOf(key) >= 0) continue;
-    target[key] = source[key];
-  }
-
-  return target;
-}
-
-/***/ }),
-
-/***/ "./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js":
-/*!*******************************************************************!*\
-  !*** ./node_modules/@babel/runtime/helpers/esm/setPrototypeOf.js ***!
-  \*******************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ _setPrototypeOf)
-/* harmony export */ });
-function _setPrototypeOf(o, p) {
-  _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
 /***/ })
 
 /******/ 	});
@@ -44210,14 +44146,12 @@ function _setPrototypeOf(o, p) {
 /******/ 			// add "moreModules" to the modules object,
 /******/ 			// then flag all "chunkIds" as loaded and fire callback
 /******/ 			var moduleId, chunkId, i = 0;
-/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
-/******/ 				for(moduleId in moreModules) {
-/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
-/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
-/******/ 					}
+/******/ 			for(moduleId in moreModules) {
+/******/ 				if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 					__webpack_require__.m[moduleId] = moreModules[moduleId];
 /******/ 				}
-/******/ 				if(runtime) var result = runtime(__webpack_require__);
 /******/ 			}
+/******/ 			if(runtime) var result = runtime(__webpack_require__);
 /******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
 /******/ 			for(;i < chunkIds.length; i++) {
 /******/ 				chunkId = chunkIds[i];
