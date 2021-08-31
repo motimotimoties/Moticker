@@ -2327,16 +2327,16 @@ function App() {
         path: "/workspacesetting",
         component: _components_pages_WorkspaceSetting__WEBPACK_IMPORTED_MODULE_7__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/loginauth",
         component: _components_pages_LoginAuth__WEBPACK_IMPORTED_MODULE_9__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/logininput",
         component: _components_pages_LoginInput__WEBPACK_IMPORTED_MODULE_10__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/inviteauth",
         component: _components_pages_inviteAuth__WEBPACK_IMPORTED_MODULE_11__.default
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_13__.jsx)(react_router_dom__WEBPACK_IMPORTED_MODULE_15__.Route, {
-        path: "/workspacesetting",
+        path: "/inviteinput",
         component: _components_pages_inviteInput__WEBPACK_IMPORTED_MODULE_12__.default
       })]
     })
@@ -2659,7 +2659,6 @@ function TimeModal(props) {
               e.preventDefault();
 
               try {
-                console.log(formatDate);
                 axios__WEBPACK_IMPORTED_MODULE_1___default().post("/api/shiftregist", {
                   user_id: userId,
                   date: year + "-" + month + "-" + day,
@@ -3051,17 +3050,38 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ LoginAuth)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
 
 
 function LoginAuth() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        type: "text",
-        maxLength: "6",
-        name: "token",
-        autoFocus: true
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__.default, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: "AuthContainer",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "AuthWrap",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("p", {
+          className: "mTi",
+          children: ["\u30E1\u30FC\u30EB\u3067\u30B3\u30FC\u30C9\u3092\u78BA\u8A8D\u3059\u308B", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+            className: "long",
+            children: "6 \u6587\u5B57\u306E\u30B3\u30FC\u30C9\u3092\u9001\u4FE1\u3057\u307E\u3057\u305F\u3002\u3053\u306E\u30B3\u30FC\u30C9\u306E\u6709\u52B9\u671F\u9593\u306F\u77ED\u3044\u305F\u3081\u3001\u3059\u3050\u306B\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("form", {
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("input", {
+            type: "text",
+            maxLength: "6",
+            name: "token",
+            autoFocus: true,
+            placeholder: "000000"
+          })
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("p", {
+          className: "mTi",
+          children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("span", {
+            children: "\u30B3\u30FC\u30C9\u304C\u898B\u3064\u304B\u3089\u306A\u3044\uFF1F\u8FF7\u60D1\u30E1\u30FC\u30EB\u30D5\u30A9\u30EB\u30C0\u3092\u78BA\u8A8D\u3057\u3066\u307F\u3066\u304F\u3060\u3055\u3044\uFF01"
+          })
+        })]
       })
     })
   });
@@ -3081,15 +3101,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ LoginInput)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
+/* harmony import */ var _images_google_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/google-logo.png */ "./resources/images/google-logo.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
 
 
 function LoginInput() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        type: "email",
-        name: "email"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__.default, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "inputContainer",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "inputWrap",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+          className: "mTi",
+          children: ["\u307E\u305A\u306F\u3001\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            children: "\u4ED5\u4E8B\u7528\u306E\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u304C\u304A\u30B9\u30B9\u30E1\u3067\u3059\u3002"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+          className: "googleLogin",
+          to: "#",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+              className: "GoogleIcon",
+              src: _images_google_logo_png__WEBPACK_IMPORTED_MODULE_2__.default,
+              alt: "GoogleIcon"
+            })
+          }), "google\u3067\u7D9A\u884C\u3059\u308B"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "mOr",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "\u3042\u308B\u3044\u306F"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "email",
+            name: "email",
+            placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "submit",
+            value: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
+          })]
+        })]
       })
     })
   });
@@ -3363,6 +3420,11 @@ function Shiftcalendar() {
   });
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_3__.default, {
     children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("ul", {
+      style: {
+        position: "absolute",
+        top: 30,
+        zIndex: 3
+      },
       children: list
     }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "calendarContainer",
@@ -3379,6 +3441,7 @@ function Shiftcalendar() {
       value: value,
       showModal: showModal,
       shiftGet: shiftGet,
+      setMonthItem: setMonthItem,
       handleClickClose: handleClickClose
     })]
   });
@@ -3802,14 +3865,35 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
 
 
+
 function InviteAuth() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        type: "text",
-        maxLength: "6",
-        name: "token",
-        autoFocus: true
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(BackgroundDesign, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)(BackgroundDesign, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
+        className: "AuthContainer",
+        children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("div", {
+          className: "AuthWrap",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsxs)("p", {
+            className: "mTi",
+            children: ["\u30E1\u30FC\u30EB\u3067\u30B3\u30FC\u30C9\u3092\u78BA\u8A8D\u3059\u308B", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              className: "long",
+              children: "6 \u6587\u5B57\u306E\u30B3\u30FC\u30C9\u3092\u9001\u4FE1\u3057\u307E\u3057\u305F\u3002\u3053\u306E\u30B3\u30FC\u30C9\u306E\u6709\u52B9\u671F\u9593\u306F\u77ED\u3044\u305F\u3081\u3001\u3059\u3050\u306B\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+            })]
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
+              type: "text",
+              maxLength: "6",
+              name: "token",
+              autoFocus: true,
+              placeholder: "000000"
+            })
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("p", {
+            className: "mTi",
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("span", {
+              children: "\u30B3\u30FC\u30C9\u304C\u898B\u3064\u304B\u3089\u306A\u3044\uFF1F\u8FF7\u60D1\u30E1\u30FC\u30EB\u30D5\u30A9\u30EB\u30C0\u3092\u78BA\u8A8D\u3057\u3066\u307F\u3066\u304F\u3060\u3055\u3044\uFF01"
+            })
+          })]
+        })
       })
     })
   });
@@ -3829,15 +3913,52 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (/* binding */ InviteInput)
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../atom/BackgroundDesign */ "./resources/js/components/atom/BackgroundDesign.jsx");
+/* harmony import */ var _images_google_logo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../images/google-logo.png */ "./resources/images/google-logo.png");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "./node_modules/react/jsx-runtime.js");
+
+
+
+
 
 
 function InviteInput() {
-  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("div", {
-    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("form", {
-      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("input", {
-        type: "email",
-        name: "email"
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_atom_BackgroundDesign__WEBPACK_IMPORTED_MODULE_1__.default, {
+    children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("div", {
+      className: "inputContainer",
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+        className: "inputWrap",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("p", {
+          className: "mTi",
+          children: ["\u307E\u305A\u306F\u3001\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), "\u3092\u5165\u529B\u3057\u3066\u304F\u3060\u3055\u3044", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            children: "\u4ED5\u4E8B\u7528\u306E\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9\u304C\u304A\u30B9\u30B9\u30E1\u3067\u3059\u3002"
+          })]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)(react_router_dom__WEBPACK_IMPORTED_MODULE_4__.Link, {
+          className: "googleLogin",
+          to: "#",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("span", {
+            children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("img", {
+              className: "GoogleIcon",
+              src: _images_google_logo_png__WEBPACK_IMPORTED_MODULE_2__.default,
+              alt: "GoogleIcon"
+            })
+          }), "google\u3067\u7D9A\u884C\u3059\u308B"]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("div", {
+          className: "mOr",
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("p", {
+            children: "\u3042\u308B\u3044\u306F"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("hr", {})]
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsxs)("form", {
+          children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "email",
+            name: "email",
+            placeholder: "\u30E1\u30FC\u30EB\u30A2\u30C9\u30EC\u30B9"
+          }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)("input", {
+            type: "submit",
+            value: "\u8A8D\u8A3C\u30E1\u30FC\u30EB\u3092\u9001\u4FE1"
+          })]
+        })]
       })
     })
   });
