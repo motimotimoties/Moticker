@@ -18,8 +18,8 @@ export default function Shiftcalendar() {
 
     const [email, setEmail] = useState("");
 
-    const [workspaceName, setWorkspaceName] = useState('');
-    const [workspaceId, setWorkspaceId] = useState('');
+    const [workspaceName, setWorkspaceName] = useState("");
+    const [workspaceId, setWorkspaceId] = useState("");
 
     const workspaceIdGet = async () => {
         axios
@@ -60,16 +60,19 @@ export default function Shiftcalendar() {
                 .then(function (res) {
                     console.log(res.data);
                     res.data.forEach((element) => {
-                        setMonthItem(monthItem => [...monthItem,{
-                            date: element.date,
-                            name: element.name,
-                            enter_time: element.enter_time.substring(0, 5),
-                            exit_time: element.exit_time.substring(0, 5),
-                            status: "true",
-                            user: element.user, 
-                        }]);
+                        setMonthItem((monthItem) => [
+                            ...monthItem,
+                            {
+                                date: element.date,
+                                name: element.name,
+                                enter_time: element.enter_time.substring(0, 5),
+                                exit_time: element.exit_time.substring(0, 5),
+                                status: "true",
+                                user: element.user,
+                            },
+                        ]);
                         console.log(monthItem);
-                    })
+                    });
                 });
         } catch (err) {
             console.log(err);
@@ -98,11 +101,19 @@ export default function Shiftcalendar() {
                         date.getDate() === getFormData(calendar)[2]
                         ? [
                               ...acc,
-                              <div className={curr.status == 'true' ? "shift-subject" : "undefine-shift-subject"}>
+                              <div
+                                  className={
+                                      curr.status == "true"
+                                          ? "shift-subject"
+                                          : "undefine-shift-subject"
+                                  }
+                              >
                                   {curr.name}
-                                  <br/>
-                                  <span>{curr.enter_time + "~" + curr.exit_time}</span>
-                                  <span>{curr.user ? curr.user: null}</span>
+                                  <br />
+                                  <span>
+                                      {curr.enter_time + "~" + curr.exit_time}
+                                  </span>
+                                  <span>{curr.user ? curr.user : null}</span>
                               </div>,
                           ]
                         : acc;
@@ -110,8 +121,7 @@ export default function Shiftcalendar() {
             </div>
         );
     };
-    useEffect(() => {
-    }, [monthItem])
+    useEffect(() => {}, [monthItem]);
 
     const onClickDay = (e) => {
         setValue(e);
@@ -132,6 +142,27 @@ export default function Shiftcalendar() {
 
     return (
         <BackgroundCalendar>
+            <div
+                style={{
+                    position: "absolute",
+                    top: 30,
+                    left: 10,
+                    width: 200,
+                    minHeight: 100,
+                    zIndex: 1,
+                    backgroundColor: "#ffb",
+                    textAlign: "center",
+                    borderRadius: 5,
+                    border: "2px solid #FEE400",
+                }}
+            >
+                招待
+                <br />
+                <span style={{fontSize: "0.75rem"}}>以下のURLを招待する人へ送信してください。</span>
+                <div style={{ fontSize: "0.75rem", padding: 10 }}>
+                    http://localhost:8080/inviteinput?id={workspaceId}
+                </div>
+            </div>
             <div className="calendarContainer">
                 <Calendar
                     locale="ja-JP"
