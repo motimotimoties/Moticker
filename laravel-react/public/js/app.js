@@ -3250,12 +3250,12 @@ function Shiftcalendar() {
       email = _useState8[0],
       setEmail = _useState8[1];
 
-  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+  var _useState9 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
       _useState10 = _slicedToArray(_useState9, 2),
       workspaceName = _useState10[0],
       setWorkspaceName = _useState10[1];
 
-  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(''),
+  var _useState11 = (0,react__WEBPACK_IMPORTED_MODULE_2__.useState)(""),
       _useState12 = _slicedToArray(_useState11, 2),
       workspaceId = _useState12[0],
       setWorkspaceId = _useState12[1];
@@ -3369,7 +3369,7 @@ function Shiftcalendar() {
       children: monthItem.reduce(function (acc, curr) {
         var calendar = new Date(curr.date);
         return view === "month" && date.getFullYear() === getFormData(calendar)[0] && date.getMonth() === getFormData(calendar)[1] && date.getDate() === getFormData(calendar)[2] ? [].concat(_toConsumableArray(acc), [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
-          className: curr.status == 'true' ? "shift-subject" : "undefine-shift-subject",
+          className: curr.status == "true" ? "shift-subject" : "undefine-shift-subject",
           children: [curr.name, /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
             children: curr.enter_time + "~" + curr.exit_time
           }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
@@ -3398,7 +3398,32 @@ function Shiftcalendar() {
     shiftGet();
   }, [workspaceId, userId]);
   return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)(_atom_BackgroundCalendar__WEBPACK_IMPORTED_MODULE_3__.default, {
-    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+      style: {
+        position: "absolute",
+        top: 30,
+        left: 10,
+        width: 200,
+        minHeight: 100,
+        zIndex: 1,
+        backgroundColor: "#ffb",
+        textAlign: "center",
+        borderRadius: 5,
+        border: "2px solid #FEE400"
+      },
+      children: ["\u62DB\u5F85", /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("span", {
+        style: {
+          fontSize: "0.75rem"
+        },
+        children: "\u4EE5\u4E0B\u306EURL\u3092\u62DB\u5F85\u3059\u308B\u4EBA\u3078\u9001\u4FE1\u3057\u3066\u304F\u3060\u3055\u3044\u3002"
+      }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxs)("div", {
+        style: {
+          fontSize: "0.75rem",
+          padding: 10
+        },
+        children: ["http://localhost:8080/inviteinput?id=", workspaceId]
+      })]
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)("div", {
       className: "calendarContainer",
       children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_5__.jsx)(react_calendar__WEBPACK_IMPORTED_MODULE_7__.default, {
         locale: "ja-JP",
